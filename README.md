@@ -1,6 +1,6 @@
 # Portfolio Site
 
-My professional landing page — built from scratch with HTML/CSS, hosted on GitHub Pages.
+My professional portfolio — built from scratch with HTML/CSS, hosted on GitHub Pages.
 
 ## 🔗 Live Site
 
@@ -8,10 +8,10 @@ My professional landing page — built from scratch with HTML/CSS, hosted on Git
 
 ## What's On It
 
-- **Hero** — name, title, "Available for consulting" badge
-- **What I Do** — three service cards: Sales Strategy, Sales Coaching, Market Analysis
+- **Hero** — name, title, "Building in public" badge
+- **What I'm Learning** — three cards: Sales Strategy, Call Analysis, Market Analysis
 - **Portfolio Grid** — links to all my GitHub repos with descriptions and tags
-- **Connect** — Twitter, LinkedIn, and Sales Call Analyzer links
+- **Connect** — Twitter, LinkedIn
 
 ## Tech
 
