@@ -13,6 +13,10 @@ My professional portfolio — built from scratch with HTML/CSS, hosted on GitHub
 - **Portfolio Grid** — links to all my GitHub repos with descriptions and tags
 - **Connect** — Twitter, LinkedIn
 
+## Activity Log
+
+Professional activity — social media engagement, project updates, and milestones — is documented in [ACTIVITY_LOG.md](ACTIVITY_LOG.md).
+
 ## Tech
 
 Single `index.html` file. No frameworks, no build step, no dependencies. Just clean HTML, CSS, and Google Fonts.
