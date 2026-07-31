@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zephr Brennan | Sales Strategist & Business Consultant</title>
-  <meta name="description" content="Professional portfolio of Zephr Brennan — Sales Strategist & Business Consultant based in Auckland, NZ.">
+  <title>Zephr Brennan | Sales Learner &amp; Builder</title>
+  <meta name="description" content="Portfolio of Zephr Brennan — Sales Learner & Builder based in Auckland, NZ. Studying B2B sales methodology, building practical frameworks, and sharing the journey publicly.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #080d1a;
-      --card-bg: rgba(15, 23, 42, 0.65);
-      --card-hover-bg: rgba(20, 30, 55, 0.85);
+      --bg-color: #0b101a;
+      --card-bg: #161d2b;
+      --card-hover-bg: #1e293b;
       --border-color: rgba(255, 255, 255, 0.08);
       --border-hover: rgba(107, 159, 255, 0.4);
       --text-main: #f8fafc;
@@ -42,7 +42,7 @@
       background: 
         radial-gradient(circle at 50% -10%, rgba(107, 159, 255, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 85% 60%, rgba(167, 139, 250, 0.08) 0%, transparent 45%),
-        #080d1a;
+        var(--bg-color);
       background-attachment: fixed;
       display: flex;
       flex-direction: column;
@@ -212,7 +212,7 @@
       box-shadow: var(--glow-shadow);
     }
 
-    /* What I Do Cards */
+    /* What I'm Learning Cards */
     .service-card {
       display: flex;
       align-items: flex-start;
@@ -301,21 +301,6 @@
       font-weight: 500;
     }
 
-    .tag-demo {
-      background: rgba(167, 139, 250, 0.12);
-      color: var(--accent-purple);
-      border-color: rgba(167, 139, 250, 0.3);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      text-decoration: none;
-      transition: background 0.2s ease;
-    }
-
-    .tag-demo:hover {
-      background: rgba(167, 139, 250, 0.25);
-    }
-
     /* About Section */
     .about-card {
       background: var(--card-bg);
@@ -344,11 +329,11 @@
     /* Connect Section */
     .connect-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 0.75rem;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 540px) {
       .connect-grid {
         grid-template-columns: 1fr;
       }
@@ -360,6 +345,7 @@
     .connect-btn {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.75rem;
       padding: 0.9rem 1.1rem;
       background: var(--card-bg);
@@ -385,17 +371,6 @@
       height: 18px;
       fill: currentColor;
       flex-shrink: 0;
-    }
-
-    .btn-featured {
-      grid-column: 1 / -1;
-      background: linear-gradient(135deg, rgba(107, 159, 255, 0.12) 0%, rgba(167, 139, 250, 0.12) 100%);
-      border: 1px solid rgba(107, 159, 255, 0.3);
-    }
-
-    .btn-featured:hover {
-      border-color: rgba(167, 139, 250, 0.6);
-      background: linear-gradient(135deg, rgba(107, 159, 255, 0.2) 0%, rgba(167, 139, 250, 0.2) 100%);
     }
 
     /* Footer */
@@ -425,41 +400,41 @@
     <header class="hero animate delay-1">
       <div class="badge">
         <span class="pulse-dot"></span>
-        Available for consulting
+        Building in Public
       </div>
       <h1 class="hero-name">Zephr Brennan</h1>
-      <p class="hero-tagline">Sales Strategist &amp; Business Consultant | Auckland, NZ</p>
+      <p class="hero-tagline">Sales learner &amp; builder | Auckland, NZ</p>
       <p class="hero-bio">
-        Bridging high-conviction sales methodology with modern analytical rigour to build predictable pipeline and scale enterprise growth. Driven by client outcomes, psychological positioning, and data-backed consulting frameworks.
+        Studying sales, building frameworks, analyzing data, and sharing the journey publicly. Documenting my practical exercises, book notes, and learning roadmap from day one.
       </p>
     </header>
 
-    <!-- What I Do Section -->
+    <!-- What I'm Learning Section -->
     <section class="animate delay-2">
-      <h2 class="section-title">What I Do</h2>
+      <h2 class="section-title">What I'm Learning</h2>
       <div class="card-stack">
         
         <div class="card service-card">
           <div class="service-icon">🎯</div>
           <div>
-            <h3 class="service-title">Sales Strategy &amp; Process Design</h3>
-            <p class="service-desc">Architecting scalable sales playbooks, qualification frameworks, and pipeline funnels that convert prospects into high-value long-term clients.</p>
+            <h3 class="service-title">Sales Strategy &amp; Process</h3>
+            <p class="service-desc">Studying how top performers build and run sales processes</p>
           </div>
         </div>
 
         <div class="card service-card">
           <div class="service-icon">🎙️</div>
           <div>
-            <h3 class="service-title">Sales Coaching &amp; Call Analysis</h3>
-            <p class="service-desc">Leveraging structured feedback frameworks and AI conversation intelligence to analyze sales calls, handle objections, and elevate pitch precision.</p>
+            <h3 class="service-title">Call Analysis &amp; Coaching</h3>
+            <p class="service-desc">Practicing call structure, objection handling, and discovery technique</p>
           </div>
         </div>
 
         <div class="card service-card">
           <div class="service-icon">📊</div>
           <div>
-            <h3 class="service-title">Market Analysis &amp; Business Consulting</h3>
-            <p class="service-desc">Delivering data-driven market evaluations, competitive strategy, and business cases to unlock new growth channels and strategic opportunities.</p>
+            <h3 class="service-title">Market Analysis</h3>
+            <p class="service-desc">Learning to read markets, size opportunities, and think commercially</p>
           </div>
         </div>
 
@@ -471,29 +446,11 @@
       <h2 class="section-title">Portfolio &amp; Public Projects</h2>
       <div class="card-stack">
 
-        <!-- Sales Call Analyzer -->
-        <a href="https://github.com/ZephrBrennanOfficial/sales-call-analyzer" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header">
-            <h3 class="project-title">
-              Sales Call Analyzer
-            </h3>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-          </div>
-          <p class="project-desc">AI-powered call coaching platform designed to evaluate sales recordings, extract key deal insights, and deliver actionable coaching feedback.</p>
-          <div class="project-tags">
-            <span class="tag">AI Coaching</span>
-            <span class="tag">Conversation Intelligence</span>
-            <span class="tag tag-demo" onclick="event.stopPropagation(); window.open('https://koda-2502c10b.base44.app/functions/serveAnalyzerApp', '_blank'); return false;">
-              ⚡ Live Demo ↗
-            </span>
-          </div>
-        </a>
-
-        <!-- Sales Consulting Toolkit -->
+        <!-- 1. Sales Consulting Toolkit -->
         <a href="https://github.com/ZephrBrennanOfficial/sales-consulting-toolkit" target="_blank" rel="noopener noreferrer" class="card">
           <div class="project-header">
             <h3 class="project-title">
-              Sales Consulting Toolkit
+              sales-consulting-toolkit
             </h3>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
           </div>
@@ -505,11 +462,11 @@
           </div>
         </a>
 
-        <!-- Business Case Studies -->
+        <!-- 2. Business Case Studies -->
         <a href="https://github.com/ZephrBrennanOfficial/business-case-studies" target="_blank" rel="noopener noreferrer" class="card">
           <div class="project-header">
             <h3 class="project-title">
-              Business Case Studies
+              business-case-studies
             </h3>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
           </div>
@@ -521,11 +478,27 @@
           </div>
         </a>
 
-        <!-- Sales Strategy Hub -->
+        <!-- 3. Sales Practice Lab (NEW) -->
+        <a href="https://github.com/ZephrBrennanOfficial/sales-practice-lab" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="project-header">
+            <h3 class="project-title">
+              sales-practice-lab
+            </h3>
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </div>
+          <p class="project-desc">Mock sales exercises, book notes, and a 6-month learning roadmap — documenting the journey from day one</p>
+          <div class="project-tags">
+            <span class="tag">Mock Exercises</span>
+            <span class="tag">Book Notes</span>
+            <span class="tag">Learning Roadmap</span>
+          </div>
+        </a>
+
+        <!-- 4. Sales Strategy Hub -->
         <a href="https://github.com/ZephrBrennanOfficial/sales-strategy-hub" target="_blank" rel="noopener noreferrer" class="card">
           <div class="project-header">
             <h3 class="project-title">
-              Sales Strategy Hub
+              sales-strategy-hub
             </h3>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
           </div>
@@ -537,11 +510,11 @@
           </div>
         </a>
 
-        <!-- NZ Policy Analysis -->
+        <!-- 5. NZ Policy Analysis -->
         <a href="https://github.com/ZephrBrennanOfficial/nz-policy-analysis" target="_blank" rel="noopener noreferrer" class="card">
           <div class="project-header">
             <h3 class="project-title">
-              NZ Policy Analysis
+              nz-policy-analysis
             </h3>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
           </div>
@@ -553,6 +526,22 @@
           </div>
         </a>
 
+        <!-- 6. Portfolio -->
+        <a href="https://github.com/ZephrBrennanOfficial/portfolio" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="project-header">
+            <h3 class="project-title">
+              portfolio
+            </h3>
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </div>
+          <p class="project-desc">Personal portfolio and learning showcase built with clean HTML/CSS, documenting sales frameworks and public projects.</p>
+          <div class="project-tags">
+            <span class="tag">Portfolio</span>
+            <span class="tag">GitHub Pages</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+        </a>
+
       </div>
     </section>
 
@@ -561,10 +550,10 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-card">
         <p class="about-text">
-          I am an entry-level sales professional in New Zealand with a relentless drive to learn, adapt, and perform. I strongly believe that great sales is never about pushy pitches or transactional tactics — it is about <span class="highlight">deep active listening</span>, strategic alignment, and guiding clients toward confident, high-value decisions.
+          I am an entry-level sales learner and builder based in Auckland, New Zealand. I believe exceptional sales isn't about high-pressure selling — it's about <span class="highlight">active listening</span>, deep curiosity, and helping people solve real problems.
         </p>
         <p class="about-text">
-          Rather than waiting for opportunities to come to me, I am actively building my skills in the open. Everything in this portfolio represents living documents, hands-on experiments, and practical frameworks designed to demonstrate commercial acumen, strategic insight, and continuous execution.
+          Instead of just studying in private, I am actively building my skillset in the open. Everything in this portfolio represents living practice: studying sales methodology, building practical frameworks, analyzing market data, and sharing the journey publicly.
         </p>
       </div>
     </section>
@@ -573,11 +562,6 @@
     <section class="animate delay-5">
       <h2 class="section-title">Connect &amp; Collaborate</h2>
       <div class="connect-grid">
-
-        <a href="https://koda-2502c10b.base44.app/functions/serveAnalyzerApp" target="_blank" rel="noopener noreferrer" class="connect-btn btn-featured">
-          <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <span>Sales Call Analyzer (Live App)</span>
-        </a>
 
         <a href="https://www.linkedin.com/in/zephr-bren-a50413426" target="_blank" rel="noopener noreferrer" class="connect-btn">
           <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
@@ -599,7 +583,7 @@
 
     <!-- Footer -->
     <footer class="animate delay-6">
-      <p>&copy; 2026 Zephr Brennan &middot; <span>Built with ambition</span></p>
+      <p>&copy; 2026 Zephr Brennan &middot; <span>Building in public</span></p>
     </footer>
 
   </main>
