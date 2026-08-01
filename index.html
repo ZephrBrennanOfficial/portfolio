@@ -11,28 +11,38 @@
   <meta property="og:url" content="https://zephrbrennanofficial.github.io/portfolio/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #0b101a;
-      --card-bg: #161d2b;
-      --card-hover-bg: #1e293b;
-      --border-color: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(107, 159, 255, 0.4);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-soft: #cbd5e1;
-      --accent-blue: #6B9FFF;
-      --accent-purple: #a78bfa;
-      --accent-green: #34d399;
-      --accent-gold: #D4B970;
-      --accent-gradient: linear-gradient(135deg, #6B9FFF 0%, #a78bfa 100%);
-      --glow-shadow: 0 8px 32px -6px rgba(107, 159, 255, 0.2);
+      --beige: #F5F1E8;
+      --beige-light: #FAF7F0;
+      --beige-mid: #EDE7D8;
+      --beige-border: #DDD5C2;
+      --black: #1a1a1a;
+      --black-soft: #2D2A26;
+      --white: #ffffff;
+      --gold: #C5A558;
+      --gold-dark: #A88A45;
+      --gold-light: #D4B970;
+      --gold-pale: #EDE3C8;
+      --text-muted: #6B6358;
+      --shadow-sm: 0 2px 8px rgba(26, 26, 26, 0.06);
+      --shadow-md: 0 8px 24px rgba(26, 26, 26, 0.08);
+      --shadow-lg: 0 16px 48px rgba(26, 26, 26, 0.12);
+      --radius: 16px;
+      --radius-sm: 10px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
-    body { min-height: 100vh; background: radial-gradient(circle at 50% -10%, rgba(107, 159, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 85% 60%, rgba(167, 139, 250, 0.08) 0%, transparent 45%), var(--bg-color); background-attachment: fixed; display: flex; flex-direction: column; align-items: center; padding: 3rem 1.25rem 2rem 1.25rem; line-height: 1.7; }
-    .container { width: 100%; max-width: 640px; }
+    html { scroll-behavior: smooth; background-color: var(--beige); }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--black); line-height: 1.7; background-color: var(--beige); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+    a { color: var(--gold-dark); text-decoration: none; }
+    a:hover { color: var(--black); }
+
+    .pattern-divider { width: 100%; height: 24px; background-color: var(--black); background-image: repeating-linear-gradient(45deg, transparent 0, transparent 8px, var(--gold) 8px, var(--gold) 10px, transparent 10px, transparent 18px, var(--gold-light) 18px, var(--gold-light) 20px); }
+
+    .container { max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
+
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
     .animate { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
     .delay-1 { animation-delay: 0.05s; } .delay-2 { animation-delay: 0.12s; } .delay-3 { animation-delay: 0.2s; }
@@ -40,99 +50,120 @@
     .delay-7 { animation-delay: 0.52s; } .delay-8 { animation-delay: 0.6s; } .delay-9 { animation-delay: 0.68s; }
     .delay-10 { animation-delay: 0.76s; }
 
-    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); color: #34d399; font-size: 0.825rem; font-weight: 500; margin-bottom: 1.25rem; letter-spacing: 0.01em; }
-    .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; position: relative; }
-    .pulse-dot::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; background-color: #10b981; animation: pulseRing 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+    /* Hero — black background, gold and white text */
+    .hero { background: var(--black); color: var(--white); padding: 4.5rem 0 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 100%; background-image: repeating-linear-gradient(90deg, transparent 0, transparent 40px, rgba(197, 165, 88, 0.03) 40px, rgba(197, 165, 88, 0.03) 42px); pointer-events: none; }
+    .hero .container { position: relative; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: rgba(197, 165, 88, 0.1); border: 1px solid rgba(197, 165, 88, 0.25); color: var(--gold-light); font-size: 0.825rem; font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 0.01em; }
+    .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold); position: relative; }
+    .pulse-dot::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; background-color: var(--gold); animation: pulseRing 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
     @keyframes pulseRing { 0% { transform: scale(0.9); opacity: 0.8; } 70% { transform: scale(2.2); opacity: 0; } 100% { transform: scale(2.2); opacity: 0; } }
+    .hero-name { font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 0.6rem; color: var(--white); }
+    .hero-tagline { font-size: 1.05rem; font-weight: 600; color: var(--gold); margin-bottom: 1.25rem; letter-spacing: -0.01em; }
+    .hero-bio { color: rgba(255, 255, 255, 0.72); font-size: 1.02rem; line-height: 1.75; margin-bottom: 1.75rem; max-width: 520px; }
+    .hero-bio strong { color: var(--white); }
+    .hero-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; background: var(--gold); color: var(--black) !important; border-radius: 9999px; font-size: 0.92rem; font-weight: 700; font-family: 'Inter', sans-serif; transition: all 0.25s ease; }
+    .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(197, 165, 88, 0.3); }
 
-    .hero { margin-bottom: 2.5rem; }
-    .hero-name { font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 0.6rem; background: linear-gradient(135deg, #ffffff 20%, #6B9FFF 70%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-tagline { font-size: 1.05rem; font-weight: 600; color: var(--accent-blue); margin-bottom: 1.1rem; letter-spacing: -0.01em; }
-    .hero-bio { color: var(--text-soft); font-size: 1.02rem; line-height: 1.7; margin-bottom: 1.5rem; }
-    .hero-bio strong { color: var(--text-main); }
-    .hero-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.85rem; background: var(--accent-gradient); border-radius: 9999px; color: white; font-size: 0.92rem; font-weight: 600; text-decoration: none; transition: all 0.25s ease; }
-    .hero-cta:hover { transform: translateY(-2px); box-shadow: var(--glow-shadow); }
+    /* Body sections — beige background */
+    section { padding: 3.5rem 0; }
+    .section-title { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--black); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; letter-spacing: -0.02em; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin-left: 0.5rem; }
+    .section-label { font-size: 0.78rem; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem; }
 
-    .section-title { font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin: 2.75rem 0 1.25rem 0; display: flex; align-items: center; gap: 0.5rem; letter-spacing: -0.02em; }
-    .section-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(107, 159, 255, 0.25), transparent); margin-left: 0.5rem; }
+    /* Value cards */
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 540px) { .values-grid { grid-template-columns: 1fr; } }
+    .value-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.5rem 1.4rem; transition: all 0.25s ease; }
+    .value-card:hover { box-shadow: var(--shadow-md); border-color: var(--gold-light); transform: translateY(-2px); }
+    .value-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .value-card h3 { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 0.35rem; }
+    .value-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
+    /* Learning list */
+    .learning-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .learning-item { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius-sm); padding: 1.15rem 1.35rem; display: flex; gap: 0.85rem; align-items: flex-start; transition: all 0.2s ease; }
+    .learning-item:hover { box-shadow: var(--shadow-sm); border-color: var(--gold-light); }
+    .learning-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; }
+    .learning-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 0.25rem; }
+    .learning-item p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* Cards (repos, writing) */
     .card-stack { display: flex; flex-direction: column; gap: 0.875rem; }
-    .card { background: var(--card-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.35rem 1.45rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); position: relative; }
+    .card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.35rem 1.45rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); position: relative; }
     a.card { text-decoration: none; color: inherit; display: block; }
-    a.card:hover { transform: translateY(-3px); background: var(--card-hover-bg); border-color: var(--border-hover); box-shadow: var(--glow-shadow); }
+    a.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--gold); }
     .project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.4rem; }
-    .project-title { font-size: 1rem; font-weight: 700; color: var(--text-main); }
+    .project-title { font-size: 1rem; font-weight: 700; color: var(--black); font-family: 'Fraunces', serif; }
     .arrow-icon { width: 18px; height: 18px; fill: none; stroke: var(--text-muted); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: stroke 0.2s; }
-    a.card:hover .arrow-icon { stroke: var(--accent-blue); }
+    a.card:hover .arrow-icon { stroke: var(--gold-dark); }
     .project-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.75rem; }
     .project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-    .tag { font-size: 0.72rem; padding: 3px 10px; border-radius: 6px; background: rgba(107, 159, 255, 0.1); color: var(--accent-blue); border: 1px solid rgba(107, 159, 255, 0.12); font-weight: 500; }
+    .tag { font-size: 0.72rem; padding: 3px 10px; border-radius: 6px; background: var(--gold-pale); color: var(--gold-dark); border: 1px solid var(--gold-light); font-weight: 500; }
 
-    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
-    @media (max-width: 540px) { .values-grid { grid-template-columns: 1fr; } }
-    .value-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.35rem 1.35rem; transition: all 0.25s ease; }
-    .value-card:hover { background: var(--card-hover-bg); border-color: var(--border-hover); }
-    .value-icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
-    .value-card h3 { font-size: 0.98rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem; }
-    .value-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; }
+    /* Offer card */
+    .offer-card { background: var(--white); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.65rem 1.65rem; transition: all 0.25s ease; text-decoration: none; color: inherit; display: block; }
+    .offer-card:hover { box-shadow: var(--shadow-md); border-color: var(--gold-dark); transform: translateY(-3px); }
+    .offer-card h3 { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; color: var(--black); margin-bottom: 0.5rem; }
+    .offer-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.85rem; }
+    .offer-link { font-size: 0.88rem; font-weight: 600; color: var(--gold-dark); display: inline-flex; align-items: center; gap: 0.4rem; }
 
-    .learning-list { display: flex; flex-direction: column; gap: 0.75rem; }
-    .learning-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.1rem 1.35rem; display: flex; gap: 0.85rem; align-items: flex-start; transition: all 0.2s ease; }
-    .learning-item:hover { background: var(--card-hover-bg); border-color: rgba(107, 159, 255, 0.2); }
-    .learning-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-blue); flex-shrink: 0; margin-top: 7px; }
-    .learning-item h3 { font-size: 0.92rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.25rem; }
-    .learning-item p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; }
-
-    .offer-card { background: var(--card-bg); border: 1px solid rgba(107, 159, 255, 0.2); border-radius: 14px; padding: 1.5rem 1.65rem; transition: all 0.25s ease; text-decoration: none; color: inherit; display: block; }
-    .offer-card:hover { background: var(--card-hover-bg); border-color: var(--accent-blue); transform: translateY(-3px); box-shadow: var(--glow-shadow); }
-    .offer-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; }
-    .offer-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.85rem; }
-    .offer-link { font-size: 0.88rem; font-weight: 600; color: var(--accent-blue); display: inline-flex; align-items: center; gap: 0.4rem; }
-
-    .about-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.75rem 1.65rem; }
-    .about-card p { color: var(--text-soft); font-size: 0.98rem; line-height: 1.8; }
-    .about-card p + p { margin-top: 1rem; }
-    .about-card strong { color: var(--text-main); }
-    .about-card .highlight { color: var(--accent-gold); font-weight: 600; }
-
-    . aspiration-card { background: linear-gradient(135deg, rgba(107, 159, 255, 0.06), rgba(167, 139, 250, 0.06)); border: 1px solid rgba(107, 159, 255, 0.15); border-radius: 16px; padding: 2rem 1.75rem; }
-    .aspiration-card p { color: var(--text-soft); font-size: 1rem; line-height: 1.8; }
-    .aspiration-card p + p { margin-top: 1rem; }
-    .aspiration-card strong { color: var(--text-main); }
-    .aspiration-card .quote { font-family: 'Fraunces', serif; font-size: 1.15rem; color: var(--accent-blue); line-height: 1.6; margin-bottom: 1.25rem; font-style: italic; font-weight: 500; }
-
-    .writing-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.35rem 1.45rem; transition: all 0.25s ease; text-decoration: none; color: inherit; display: block; }
-    .writing-card:hover { background: var(--card-hover-bg); border-color: var(--border-hover); transform: translateY(-3px); }
-    .writing-title { font-size: 1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem; line-height: 1.4; }
+    /* Writing card */
+    .writing-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.35rem 1.45rem; transition: all 0.25s ease; text-decoration: none; color: inherit; display: block; }
+    .writing-card:hover { box-shadow: var(--shadow-md); border-color: var(--gold); transform: translateY(-3px); }
+    .writing-title { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 0.4rem; line-height: 1.4; font-family: 'Fraunces', serif; }
     .writing-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.6rem; }
-    .writing-link { font-size: 0.85rem; font-weight: 600; color: var(--accent-blue); }
+    .writing-link { font-size: 0.85rem; font-weight: 600; color: var(--gold-dark); }
 
+    /* About card */
+    .about-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 2rem 1.75rem; }
+    .about-card p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.8; }
+    .about-card p + p { margin-top: 1rem; }
+    .about-card strong { color: var(--black); }
+    .about-card .highlight { color: var(--gold-dark); font-weight: 600; }
+
+    /* Aspiration card */
+    .aspiration-card { background: linear-gradient(135deg, var(--beige-mid), var(--gold-pale)); border: 1px solid var(--gold-light); border-radius: var(--radius); padding: 2.25rem 2rem; }
+    .aspiration-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.85; }
+    .aspiration-card p + p { margin-top: 1rem; }
+    .aspiration-card strong { color: var(--black); }
+    .aspiration-card .quote { font-family: 'Fraunces', serif; font-size: 1.2rem; color: var(--gold-dark); line-height: 1.5; margin-bottom: 1.5rem; font-style: italic; font-weight: 600; }
+
+    /* Connect */
     .connect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
     @media (max-width: 420px) { .connect-grid { grid-template-columns: 1fr; } }
-    .connect-btn { display: flex; align-items: center; gap: 0.65rem; padding: 0.95rem 1.25rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; color: var(--text-main); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.25s ease; }
-    .connect-btn:hover { background: var(--card-hover-bg); border-color: var(--accent-blue); transform: translateY(-2px); }
-    .connect-btn svg { width: 20px; height: 20px; fill: var(--text-muted); transition: fill 0.2s; }
-    .connect-btn:hover svg { fill: var(--accent-blue); }
+    .connect-btn { display: flex; align-items: center; gap: 0.65rem; padding: 1rem 1.25rem; background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius-sm); color: var(--black); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.25s ease; }
+    .connect-btn:hover { box-shadow: var(--shadow-sm); border-color: var(--gold); transform: translateY(-2px); }
+    .connect-btn svg { width: 20px; height: 20px; fill: var(--gold-dark); transition: fill 0.2s; }
+    .connect-btn:hover svg { fill: var(--black); }
 
-    footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); text-align: center; }
-    footer p { font-size: 0.85rem; color: var(--text-muted); }
-    footer span { color: var(--accent-green); }
+    /* Footer — black */
+    footer { background: var(--black); color: rgba(255, 255, 255, 0.5); padding: 3rem 1.5rem 2.5rem; text-align: center; }
+    .footer-pattern { height: 20px; margin-bottom: 2rem; background-image: repeating-linear-gradient(90deg, transparent 0, transparent 20px, var(--gold) 20px, var(--gold) 22px, transparent 22px, transparent 40px, var(--gold-light) 40px, var(--gold-light) 42px); opacity: 0.3; }
+    .footer-logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .footer-text { font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); }
+    .footer-text span { color: var(--gold); }
   </style>
 </head>
 <body>
-  <main class="container">
 
-    <!-- Hero -->
-    <header class="hero animate delay-1">
-      <div class="badge"><span class="pulse-dot"></span>Building in Public</div>
-      <h1 class="hero-name">Zephr Brennan</h1>
-      <p class="hero-tagline">Writer · Builder · Lifelong Learner — Auckland, Aotearoa NZ</p>
-      <p class="hero-bio">I'm an early-career professional building a career from the ground up — in <strong>sales, business strategy, and AI</strong>. I document everything I learn, create things in public, and believe that starting at the bottom is an advantage, not a limitation. The view from here teaches you things the top never will.</p>
-      <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" rel="noopener noreferrer" class="hero-cta">Quill — LinkedIn Ghostwriting →</a>
-    </header>
+  <!-- Hero — Black background -->
+  <header class="hero">
+    <div class="container">
+      <div class="badge animate delay-1"><span class="pulse-dot"></span>Building in Public</div>
+      <h1 class="hero-name animate delay-2">Zephr Brennan</h1>
+      <p class="hero-tagline animate delay-3">Writer · Builder · Lifelong Learner — Auckland, Aotearoa NZ</p>
+      <p class="hero-bio animate delay-4">I'm an early-career professional building a career from the ground up — in <strong>sales, business strategy, and AI</strong>. I document everything I learn, create things in public, and believe that starting at the bottom is an advantage, not a limitation. The view from here teaches you things the top never will.</p>
+      <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" rel="noopener noreferrer" class="hero-cta animate delay-5">Quill — LinkedIn Ghostwriting →</a>
+    </div>
+  </header>
 
-    <!-- What I Stand For -->
-    <section class="animate delay-2">
+  <div class="pattern-divider"></div>
+
+  <!-- What I Stand For -->
+  <section class="animate delay-3">
+    <div class="container">
+      <p class="section-label">Values</p>
       <h2 class="section-title">What I Stand For</h2>
       <div class="values-grid">
         <div class="value-card">
@@ -156,10 +187,15 @@
           <p>Short, direct, no jargon. If it doesn't sound like something a real person would say out loud, it doesn't get published.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- What I'm Learning & Creating -->
-    <section class="animate delay-3">
+  <div class="pattern-divider"></div>
+
+  <!-- What I'm Learning & Creating -->
+  <section class="animate delay-4">
+    <div class="container">
+      <p class="section-label">Current Work</p>
       <h2 class="section-title">What I'm Learning &amp; Creating</h2>
       <div class="learning-list">
         <div class="learning-item">
@@ -198,10 +234,13 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- What I Offer -->
-    <section class="animate delay-4">
+  <!-- What I Offer -->
+  <section class="animate delay-5">
+    <div class="container">
+      <p class="section-label">Services</p>
       <h2 class="section-title">What I Offer</h2>
       <div class="card-stack">
         <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" rel="noopener noreferrer" class="offer-card">
@@ -210,10 +249,15 @@
           <span class="offer-link">Visit Quill →</span>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- My Writing -->
-    <section class="animate delay-5">
+  <div class="pattern-divider"></div>
+
+  <!-- My Writing -->
+  <section class="animate delay-6">
+    <div class="container">
+      <p class="section-label">Writing</p>
       <h2 class="section-title">My Writing</h2>
       <div class="card-stack">
         <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="writing-card">
@@ -222,10 +266,13 @@
           <div class="writing-link">Read on Substack →</div>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Portfolio & Repos -->
-    <section class="animate delay-6">
+  <!-- Portfolio & Repos -->
+  <section class="animate delay-7">
+    <div class="container">
+      <p class="section-label">Projects</p>
       <h2 class="section-title">Portfolio &amp; Repos</h2>
       <div class="card-stack">
         <a href="https://github.com/ZephrBrennanOfficial/ghostwriting" target="_blank" rel="noopener noreferrer" class="card">
@@ -254,20 +301,28 @@
           <div class="project-tags"><span class="tag">Data</span><span class="tag">NZ</span></div>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Me -->
-    <section class="animate delay-7">
+  <div class="pattern-divider"></div>
+
+  <!-- About Me -->
+  <section class="animate delay-8">
+    <div class="container">
+      <p class="section-label">Background</p>
       <h2 class="section-title">About Me</h2>
       <div class="about-card">
         <p>I'm Zephr — an early-career professional based in <strong>Auckland, Aotearoa New Zealand</strong>. My background spans customer service, telefundraising, and freelance work in theatre and makeup artistry. None of that is a traditional path into business strategy or tech. I'm aware of that.</p>
         <p>But I've learned that <span class="highlight">starting from the bottom is a perspective you can't fake</span>. When you've been the person making the cold calls, fielding the objections, and hearing the rejections — you understand things about sales and human behaviour that no course can teach. That perspective is what I'm building on.</p>
         <p>I write on <strong>Substack</strong>, share my process on <strong>LinkedIn</strong>, build tools on <strong>GitHub</strong>, and document everything I learn along the way. Not because I've arrived — because the work itself is the proof.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Where I'm Heading -->
-    <section class="animate delay-8">
+  <!-- Where I'm Heading -->
+  <section class="animate delay-9">
+    <div class="container">
+      <p class="section-label">Aspirations</p>
       <h2 class="section-title">Where I'm Heading</h2>
       <div class="aspiration-card">
         <p class="quote">"It doesn't matter where you start. It matters that you refuse to stay there."</p>
@@ -275,10 +330,15 @@
         <p>I'm building toward a career where my <strong>bottom-up perspective</strong> — the sales floor, the cold calls, the rejections, the customer service frontline — becomes the thing that makes my insight irreplaceable. Not despite where I started, but <strong>because of it</strong>.</p>
         <p>The goal isn't to skip steps. It's to earn every single one of them.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Connect -->
-    <section class="animate delay-9">
+  <div class="pattern-divider"></div>
+
+  <!-- Connect -->
+  <section class="animate delay-10">
+    <div class="container">
+      <p class="section-label">Socials</p>
       <h2 class="section-title">Connect</h2>
       <div class="connect-grid">
         <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="connect-btn">
@@ -298,12 +358,15 @@
           <span>Twitter / X</span>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="animate delay-10">
-      <p>&copy; 2026 Zephr Brennan &middot; <span>Building in public</span> &middot; Auckland, Aotearoa NZ</p>
-    </footer>
-  </main>
+  <!-- Footer — Black -->
+  <footer>
+    <div class="footer-pattern"></div>
+    <div class="footer-logo">Zephr Brennan</div>
+    <p class="footer-text">&copy; 2026 Zephr Brennan &middot; <span>Building in public</span> &middot; Auckland, Aotearoa NZ</p>
+  </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
