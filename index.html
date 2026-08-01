@@ -6,7 +6,6 @@
   <title>Zephr Brennan | Sales Learner & Builder</title>
   <meta name="description" content="Portfolio of Zephr Brennan — building a career in sales, AI & telecoms from the ground up in Auckland, NZ. Documenting the journey publicly.">
 
-  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Zephr Brennan | Sales Learner & Builder">
   <meta property="og:description" content="Building a career in sales from scratch — frameworks, practice reps, and analysis. Documenting everything in public from Auckland, NZ.">
@@ -34,28 +33,10 @@
       --accent-gradient: linear-gradient(135deg, #6B9FFF 0%, #a78bfa 100%);
       --glow-shadow: 0 8px 32px -6px rgba(107, 159, 255, 0.2);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html {
-      scroll-behavior: smooth;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body {
-      min-height: 100vh;
-      background: radial-gradient(circle at 50% -10%, rgba(107, 159, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 85% 60%, rgba(167, 139, 250, 0.08) 0%, transparent 45%), var(--bg-color);
-      background-attachment: fixed;
-      display: flex; flex-direction: column; align-items: center;
-      padding: 3rem 1.25rem 2rem 1.25rem;
-      line-height: 1.6;
-    }
-
+    html { scroll-behavior: smooth; background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+    body { min-height: 100vh; background: radial-gradient(circle at 50% -10%, rgba(107, 159, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 85% 60%, rgba(167, 139, 250, 0.08) 0%, transparent 45%), var(--bg-color); background-attachment: fixed; display: flex; flex-direction: column; align-items: center; padding: 3rem 1.25rem 2rem 1.25rem; line-height: 1.6; }
     .container { width: 100%; max-width: 600px; }
-
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
     .animate { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
     .delay-1 { animation-delay: 0.05s; }
@@ -66,47 +47,24 @@
     .delay-6 { animation-delay: 0.55s; }
     .delay-7 { animation-delay: 0.65s; }
     .delay-8 { animation-delay: 0.75s; }
-
-    .badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 14px; border-radius: 9999px;
-      background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);
-      color: #34d399; font-size: 0.825rem; font-weight: 500; margin-bottom: 1.25rem; letter-spacing: 0.01em;
-    }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); color: #34d399; font-size: 0.825rem; font-weight: 500; margin-bottom: 1.25rem; letter-spacing: 0.01em; }
     .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; position: relative; }
     .pulse-dot::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; background-color: #10b981; animation: pulseRing 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
     @keyframes pulseRing { 0% { transform: scale(0.9); opacity: 0.8; } 70% { transform: scale(2.2); opacity: 0; } 100% { transform: scale(2.2); opacity: 0; } }
-
     .hero { margin-bottom: 2.5rem; }
-    .hero-name {
-      font-size: 2.75rem; font-weight: 800; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, #ffffff 20%, #6B9FFF 70%, #a78bfa 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
+    .hero-name { font-size: 2.75rem; font-weight: 800; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 0.5rem; background: linear-gradient(135deg, #ffffff 20%, #6B9FFF 70%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-tagline { font-size: 1.05rem; font-weight: 600; color: var(--accent-blue); margin-bottom: 1rem; letter-spacing: -0.01em; }
     .hero-bio { color: var(--text-muted); font-size: 1rem; line-height: 1.65; }
-
-    .section-title {
-      font-size: 1.2rem; font-weight: 700; color: var(--text-main);
-      margin: 2.5rem 0 1.25rem 0; display: flex; align-items: center; gap: 0.5rem; letter-spacing: -0.02em;
-    }
+    .section-title { font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin: 2.5rem 0 1.25rem 0; display: flex; align-items: center; gap: 0.5rem; letter-spacing: -0.02em; }
     .section-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(107, 159, 255, 0.25), transparent); margin-left: 0.5rem; }
-
     .card-stack { display: flex; flex-direction: column; gap: 0.875rem; }
-
-    .card {
-      background: var(--card-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-      border: 1px solid var(--border-color); border-radius: 14px; padding: 1.25rem 1.35rem;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); position: relative;
-    }
+    .card { background: var(--card-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.25rem 1.35rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); position: relative; }
     a.card { text-decoration: none; color: inherit; display: block; }
     a.card:hover { transform: translateY(-3px); background: var(--card-hover-bg); border-color: var(--border-hover); box-shadow: var(--glow-shadow); }
-
     .service-card { display: flex; align-items: flex-start; gap: 1rem; }
     .service-icon { font-size: 1.5rem; line-height: 1; padding: 0.6rem; background: rgba(107, 159, 255, 0.08); border: 1px solid rgba(107, 159, 255, 0.15); border-radius: 10px; flex-shrink: 0; }
     .service-title { font-size: 1rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.35rem; }
     .service-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
-
     .project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
     .project-title { font-size: 1.05rem; font-weight: 600; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem; }
     a.card:hover .project-title { color: var(--accent-blue); }
@@ -117,39 +75,29 @@
     .tag { font-size: 0.75rem; padding: 3px 9px; border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--accent-blue); border: 1px solid rgba(107, 159, 255, 0.15); font-weight: 500; }
 
     /* Services */
-    .service-offering {
-      background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px;
-      padding: 1.35rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    .services-intro {
+      font-size: 0.95rem; color: var(--text-muted); line-height: 1.65;
+      margin-bottom: 1.25rem; padding: 1rem 1.1rem;
+      background: rgba(107, 159, 255, 0.04); border-left: 3px solid var(--accent-blue);
+      border-radius: 0 8px 8px 0;
     }
-    .service-offering:hover {
-      transform: translateY(-3px); background: var(--card-hover-bg);
-      border-color: var(--border-hover); box-shadow: var(--glow-shadow);
-    }
-    .offering-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
-    .offering-title { font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.35rem; }
-    .offering-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.65rem; }
-    .offering-deliverables { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+    .services-intro strong { color: var(--text-main); font-weight: 600; }
+    .service-offering { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.35rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+    .service-offering:hover { transform: translateY(-3px); background: var(--card-hover-bg); border-color: var(--border-hover); box-shadow: var(--glow-shadow); }
+    .offering-title { font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.4rem; }
+    .offering-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.7rem; }
+    .offering-deliverables { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; padding-top: 0.6rem; border-top: 1px solid rgba(255,255,255,0.05); }
     .offering-deliverables strong { color: var(--accent-blue); font-weight: 500; }
-    .offering-price {
-      display: inline-block; margin-top: 0.65rem; font-size: 0.78rem; font-weight: 500;
-      color: var(--accent-green); padding: 3px 10px; border-radius: 6px;
-      background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.2);
-    }
-
-    .services-note {
-      margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);
-      text-align: center; line-height: 1.5;
-    }
+    .offering-price { display: inline-block; margin-top: 0.7rem; font-size: 0.78rem; font-weight: 600; color: var(--accent-green); padding: 3px 12px; border-radius: 6px; background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.2); }
+    .services-note { margin-top: 1.1rem; font-size: 0.85rem; color: var(--text-muted); text-align: center; line-height: 1.55; }
+    .services-note strong { color: var(--text-main); font-weight: 500; }
 
     .about-card { background: var(--card-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.5rem; }
     .about-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
     .about-text + .about-text { margin-top: 1rem; }
     .highlight { color: var(--text-main); font-weight: 500; }
 
-    .writing-card {
-      background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px;
-      padding: 1.25rem 1.35rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+    .writing-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.25rem 1.35rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
     .writing-card:hover { transform: translateY(-3px); background: var(--card-hover-bg); border-color: var(--border-hover); box-shadow: var(--glow-shadow); }
     .writing-title { font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.35rem; }
     .writing-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
@@ -158,15 +106,9 @@
 
     .connect-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
     @media (max-width: 540px) { .connect-grid { grid-template-columns: repeat(2, 1fr); } .hero-name { font-size: 2.25rem; } }
-    .connect-btn {
-      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-      padding: 0.85rem 0.8rem; background: var(--card-bg); border: 1px solid var(--border-color);
-      border-radius: 12px; color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.85rem;
-      transition: all 0.25s ease;
-    }
+    .connect-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 0.8rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: all 0.25s ease; }
     .connect-btn:hover { transform: translateY(-2px); background: var(--card-hover-bg); border-color: var(--border-hover); box-shadow: var(--glow-shadow); color: var(--accent-blue); }
     .connect-btn svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
-
     footer { margin-top: 3.5rem; text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--border-color); color: #64748b; font-size: 0.85rem; letter-spacing: 0.02em; }
     footer span { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600; }
   </style>
@@ -175,7 +117,7 @@
 
   <main class="container">
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <header class="hero animate delay-1">
       <div class="badge">
         <span class="pulse-dot"></span>
@@ -188,11 +130,10 @@
       </p>
     </header>
 
-    <!-- What I'm Learning Section -->
+    <!-- What I'm Learning -->
     <section class="animate delay-2">
       <h2 class="section-title">What I'm Learning</h2>
       <div class="card-stack">
-
         <div class="card">
           <div class="service-card">
             <div class="service-icon">📊</div>
@@ -202,7 +143,6 @@
             </div>
           </div>
         </div>
-
         <div class="card">
           <div class="service-card">
             <div class="service-icon">🧠</div>
@@ -212,7 +152,6 @@
             </div>
           </div>
         </div>
-
         <div class="card">
           <div class="service-card">
             <div class="service-icon">📈</div>
@@ -222,7 +161,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -230,148 +168,112 @@
     <section class="animate delay-3">
       <h2 class="section-title">Portfolio</h2>
       <div class="card-stack">
-
         <a href="https://github.com/ZephrBrennanOfficial/sales-consulting-toolkit" target="_blank" rel="noopener noreferrer" class="card">
           <div class="project-header">
             <div class="project-title">Sales Consulting Toolkit</div>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
           </div>
           <div class="project-desc">Practical sales frameworks — audit checklists, discovery templates, ROI calculator, objection handling, and sales psychology.</div>
-          <div class="project-tags">
-            <span class="tag">Sales</span>
-            <span class="tag">Frameworks</span>
-            <span class="tag">HTML/CSS</span>
-          </div>
+          <div class="project-tags"><span class="tag">Sales</span><span class="tag">Frameworks</span><span class="tag">HTML/CSS</span></div>
         </a>
-
         <a href="https://github.com/ZephrBrennanOfficial/business-case-studies" target="_blank" rel="noopener noreferrer" class="card">
           <div class="project-header">
             <div class="project-title">Business Case Studies</div>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
           </div>
           <div class="project-desc">Practice case studies — lead response analysis, NZ SaaS market sizing, sales diagnostics, and metrics that actually matter.</div>
-          <div class="project-tags">
-            <span class="tag">Analysis</span>
-            <span class="tag">SaaS</span>
-            <span class="tag">NZ Market</span>
-          </div>
+          <div class="project-tags"><span class="tag">Analysis</span><span class="tag">SaaS</span><span class="tag">NZ Market</span></div>
         </a>
-
         <a href="https://github.com/ZephrBrennanOfficial/sales-practice-lab" target="_blank" rel="noopener noreferrer" class="card">
           <div class="project-header">
             <div class="project-title">Sales Practice Lab</div>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
           </div>
           <div class="project-desc">Mock discovery calls, cold outreach experiments, book notes, and objection roleplay logs — with honest self-critiques.</div>
-          <div class="project-tags">
-            <span class="tag">Practice</span>
-            <span class="tag">Roleplay</span>
-            <span class="tag">Self-critique</span>
-          </div>
+          <div class="project-tags"><span class="tag">Practice</span><span class="tag">Roleplay</span><span class="tag">Self-critique</span></div>
         </a>
-
         <a href="https://github.com/ZephrBrennanOfficial/nz-policy-analysis" target="_blank" rel="noopener noreferrer" class="card">
           <div class="project-header">
             <div class="project-title">NZ Policy Analysis</div>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
           </div>
           <div class="project-desc">Data-driven analysis of Aotearoa NZ housing, cost of living, and public policy. No party lines — just numbers.</div>
-          <div class="project-tags">
-            <span class="tag">Data</span>
-            <span class="tag">NZ</span>
-            <span class="tag">Policy</span>
-          </div>
+          <div class="project-tags"><span class="tag">Data</span><span class="tag">NZ</span><span class="tag">Policy</span></div>
         </a>
-
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section class="animate delay-4">
       <h2 class="section-title">Work With Me</h2>
+      <div class="services-intro">
+        <strong>I'm not a consultant. I'm your customer.</strong> I make cold calls for a living and I'm the demographic your sales team is trying to reach. I'll tell you what your team won't — because they wrote the script, and I'm the one hanging up on it.
+      </div>
       <div class="card-stack">
 
         <div class="service-offering">
-          <div class="offering-icon">✉️</div>
-          <div class="offering-title">Cold Outreach That Gets Replies</div>
+          <div class="offering-title">The Cold Outreach Teardown</div>
           <div class="offering-desc">
-            Custom cold email and LinkedIn connection templates written from scratch for your product and audience. Not generic templates — messaging built around your prospect's actual pain points.
+            Send me your team's cold email sequence and call script. I'll tear it apart from <em>both</em> sides of the phone — as someone who makes 40+ cold calls a day AND as the person receiving your outreach. I'll show you exactly where prospects disengage, what makes them hang up in the first 10 seconds, and what actually earns a reply.
           </div>
           <div class="offering-deliverables">
-            <strong>You get:</strong> 3 cold email templates + 2 LinkedIn outreach scripts + subject line variations + follow-up sequence + psychology breakdown so you understand why each one works and can adapt them yourself.
+            <strong>You get:</strong> Line-by-line teardown of your email sequence + call script. Every line marked: "I'd reply" / "I'd ignore" / "I'd hang up." Plus a rewritten version of your top 3 messages and the reasoning behind every change.
           </div>
-          <div class="offering-price">From $90 NZD</div>
+          <div class="offering-price">$350 NZD</div>
         </div>
 
         <div class="service-offering">
-          <div class="offering-icon">🎯</div>
-          <div class="offering-title">Sales Call Practice &amp; Feedback</div>
+          <div class="offering-title">The Buyer's Seat Audit</div>
           <div class="offering-desc">
-            Send me a recording of your discovery call or cold call and I'll audit it — your first 90 seconds, question flow, objection handling, and close. Or we do it live: I play prospect, you pitch, and I give you honest feedback with specific fixes.
+            Walk me through your full sales process — first touch to close — as if I'm your prospect. I'll document every moment I'd lose trust, every question that feels scripted, every place you're pitching when you should be listening. You get a brutally honest report from the other side of the table.
           </div>
           <div class="offering-deliverables">
-            <strong>You get:</strong> Detailed written audit of your call with a scorecard across 8 dimensions, or a 45-minute live roleplay session with real-time coaching. Either way — specific, actionable feedback, not vague encouragement.
+            <strong>You get:</strong> A documented journey through your full funnel as a real buyer — every friction point, trust break, and disengagement moment flagged. Plus a prioritised list of the top 5 things losing you deals right now.
           </div>
-          <div class="offering-price">From $60 NZD</div>
+          <div class="offering-price">$500 NZD</div>
         </div>
 
         <div class="service-offering">
-          <div class="offering-icon">💡</div>
-          <div class="offering-title">LinkedIn Profile Rewrite</div>
+          <div class="offering-title">The Reality Check Pitch</div>
           <div class="offering-desc">
-            Headline, About section, and experience entries rewritten to sound like a real human, not a corporate template. Built for career changers and early-career professionals who need to stand out without faking experience they don't have yet.
+            A 60-minute call where you pitch me your product as if I'm your ideal customer. I'll ask the questions a real buyer asks, raise the objections a real buyer raises, and push back where a real buyer would push back. Then a full debrief — what landed, what didn't, what you missed entirely.
           </div>
           <div class="offering-deliverables">
-            <strong>You get:</strong> Rewritten headline + About section + experience entries + keyword strategy + a content plan for your first 5 posts so your profile actually works after the rewrite. Turnaround: 3 days.
+            <strong>You get:</strong> 60-min live pitch session + 30-min recorded debrief. I'll tell you where you earned my trust, where you lost it, and the one thing you said that would have made me say yes if you'd said it sooner.
           </div>
-          <div class="offering-price">From $120 NZD</div>
+          <div class="offering-price">$300 NZD</div>
         </div>
 
         <div class="service-offering">
-          <div class="offering-icon">🤖</div>
-          <div class="offering-title">AI for Your Sales Workflow</div>
+          <div class="offering-title">Messaging Ground Truth</div>
           <div class="offering-desc">
-            I'll map out where AI can save your team time — email drafting, call summaries, CRM notes, lead research, follow-up automation — and set up the prompts and tools to make it work. No jargon, no hype, just practical setup.
+            Send me your website, sales deck, and case studies. I'll tell you which parts make sense to someone outside your industry, which parts are jargon that kills trust, and which parts would make a real buyer lean in. Most messaging reviews are done by people who already know your product. I don't. That's the point.
           </div>
           <div class="offering-deliverables">
-            <strong>You get:</strong> Workflow audit identifying 3-5 automation opportunities + ready-to-use prompt library + step-by-step setup guide for your tools. Works with ChatGPT, Claude, or whatever you're already using.
+            <strong>You get:</strong> Annotated review of your website, deck, and top 3 case studies. Every page/slide marked: "This builds trust" / "This loses me" / "I have no idea what this means." Plus rewritten versions of your 3 weakest sections.
           </div>
-          <div class="offering-price">From $150 NZD</div>
-        </div>
-
-        <div class="service-offering">
-          <div class="offering-icon">🇳🇿</div>
-          <div class="offering-title">NZ Market Entry Brief</div>
-          <div class="offering-desc">
-            Thinking about expanding into New Zealand? I'll build a data-driven brief covering market sizing, competitive landscape, who's buying, and what the go-to-market play looks like. Based on public data, clearly sourced.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> 8-12 page brief with TAM/SAM/SOM sizing, competitive matrix, buyer persona profiles, GTM recommendations, and 30-60-90 day entry roadmap. All sources cited inline.
-          </div>
-          <div class="offering-price">From $300 NZD</div>
+          <div class="offering-price">$400 NZD</div>
         </div>
 
       </div>
       <p class="services-note">
-        Rates are early-career friendly — I'm building a reputation, not a consultancy. Everything is scoped to your actual need, not padded with fluff. DM me on LinkedIn or Substack to chat.
+        <strong>One-time engagements. No retainer. No upsell.</strong> You get the truth, you decide what to do with it. DM me on LinkedIn to start.
       </p>
     </section>
 
-    <!-- Writing Section -->
+    <!-- Writing -->
     <section class="animate delay-5">
       <h2 class="section-title">Latest Writing</h2>
       <div class="card-stack">
-
         <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="writing-card" style="text-decoration: none; color: inherit; display: block;">
           <div class="writing-title">What I Learned About Sales From Being the One Nobody Wants to Talk To</div>
           <div class="writing-desc">Part 1 of a 5-part series on what the bottom of the ladder teaches you about sales. Objections as maps, not walls.</div>
           <div class="writing-link">Read on Substack →</div>
         </a>
-
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section class="animate delay-6">
       <h2 class="section-title">About Me</h2>
       <div class="about-card">
@@ -387,40 +289,33 @@
       </div>
     </section>
 
-    <!-- Connect Section -->
+    <!-- Connect -->
     <section class="animate delay-7">
       <h2 class="section-title">Connect &amp; Collaborate</h2>
       <div class="connect-grid">
-
         <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="connect-btn">
           <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.612V24h21.08V10.612H1.46zM6.602 18.93H3.294v-2.01h3.308v2.01zm0-3.676H3.294v-2.01h3.308v2.01zm5.825 3.676H9.119v-2.01h3.308v2.01zm0-3.676H9.119v-2.01h3.308v2.01zm5.825 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zm5.826 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zM1.46 4.273V1.437h21.08v2.836H1.46z"/></svg>
           <span>Substack</span>
         </a>
-
         <a href="https://www.linkedin.com/in/zephrbrennan" target="_blank" rel="noopener noreferrer" class="connect-btn">
           <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
           <span>LinkedIn</span>
         </a>
-
         <a href="https://github.com/ZephrBrennanOfficial" target="_blank" rel="noopener noreferrer" class="connect-btn">
           <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
           <span>GitHub</span>
         </a>
-
         <a href="https://twitter.com/ZephrBrennan" target="_blank" rel="noopener noreferrer" class="connect-btn">
           <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           <span>Twitter / X</span>
         </a>
-
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="animate delay-8">
       <p>&copy; 2026 Zephr Brennan &middot; <span>Building in public</span></p>
     </footer>
 
   </main>
-
 </body>
 </html>
