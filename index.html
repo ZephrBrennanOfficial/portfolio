@@ -21,7 +21,7 @@
       --bg-color: #0b101a; --card-bg: #161d2b; --card-hover-bg: #1e293b;
       --border-color: rgba(255, 255, 255, 0.08); --border-hover: rgba(107, 159, 255, 0.4);
       --text-main: #f8fafc; --text-muted: #94a3b8;
-      --accent-blue: #6B9FFF; --accent-purple: #a78bfa; --accent-green: #34d399; --accent-gold: #fbbf24;
+      --accent-blue: #6B9FFF; --accent-purple: #a78bfa;
       --accent-gradient: linear-gradient(135deg, #6B9FFF 0%, #a78bfa 100%);
       --glow-shadow: 0 8px 32px -6px rgba(107, 159, 255, 0.2);
     }
@@ -33,7 +33,7 @@
     .animate { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
     .delay-1 { animation-delay: 0.05s; } .delay-2 { animation-delay: 0.15s; } .delay-3 { animation-delay: 0.25s; }
     .delay-4 { animation-delay: 0.35s; } .delay-5 { animation-delay: 0.45s; } .delay-6 { animation-delay: 0.55s; }
-    .delay-7 { animation-delay: 0.65s; } .delay-8 { animation-delay: 0.75s; }
+    .delay-7 { animation-delay: 0.65s; }
     .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); color: #34d399; font-size: 0.825rem; font-weight: 500; margin-bottom: 1.25rem; letter-spacing: 0.01em; }
     .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; position: relative; }
     .pulse-dot::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; background-color: #10b981; animation: pulseRing 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
@@ -60,20 +60,6 @@
     .project-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.6rem; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
     .tag { font-size: 0.75rem; padding: 3px 9px; border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--accent-blue); border: 1px solid rgba(107, 159, 255, 0.15); font-weight: 500; }
-    .services-intro { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; padding: 1.1rem 1.2rem; background: linear-gradient(135deg, rgba(107, 159, 255, 0.06), rgba(167, 139, 250, 0.04)); border: 1px solid rgba(107, 159, 255, 0.15); border-radius: 12px; }
-    .services-intro strong { color: var(--text-main); font-weight: 600; }
-    .services-intro em { color: var(--accent-blue); font-style: normal; font-weight: 500; }
-    .service-offering { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.5rem 1.35rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
-    .service-offering:hover { transform: translateY(-3px); background: var(--card-hover-bg); border-color: var(--border-hover); box-shadow: var(--glow-shadow); }
-    .offering-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.5rem; }
-    .offering-title { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
-    .offering-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.8rem; }
-    .offering-desc strong { color: var(--text-main); font-weight: 500; }
-    .offering-deliverables { font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; padding-top: 0.7rem; border-top: 1px solid rgba(255,255,255,0.06); }
-    .offering-deliverables strong { color: var(--accent-blue); font-weight: 500; }
-    .offering-price { display: inline-block; margin-top: 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent-green); padding: 4px 14px; border-radius: 6px; background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.2); }
-    .services-note { margin-top: 1.25rem; font-size: 0.88rem; color: var(--text-muted); text-align: center; line-height: 1.6; padding: 0.85rem 1rem; background: rgba(255,255,255,0.02); border-radius: 8px; }
-    .services-note strong { color: var(--text-main); font-weight: 500; }
     .about-card { background: var(--card-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.5rem; }
     .about-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
     .about-text + .about-text { margin-top: 1rem; }
@@ -122,158 +108,14 @@
       </div>
     </section>
 
-    <!-- SERVICES — 10 niche offerings -->
     <section class="animate delay-4">
-      <h2 class="section-title">What Only I Can Give You</h2>
-      <div class="services-intro">
-        You can hire consultants who learned your business from the outside and haven't been in the trenches since the Obama era. Or you can hire someone who's <em>in it right now</em> — making cold calls daily, building with AI, studying the methodology behind every decision, documenting everything publicly, and seeing your organisation from the angle you'll never see it from: the bottom. <strong>These aren't services. They're perspectives that didn't exist until I started offering them — because nobody else is in my position.</strong>
-      </div>
-      <div class="card-stack">
-
-        <!-- 1. SALES -->
-        <div class="service-offering">
-          <div class="offering-tag">Sales · Built from live data</div>
-          <div class="offering-title">The Rejection Audit</div>
-          <div class="offering-desc">
-            Your team has been trained on the 5-10 common objections from a textbook. I've collected <strong>200+ real rejection patterns</strong> from actual cold calls — the polite no, the "just send me an email" no (which is a no), the "I'm not the right person" no, the angry no, the no that sounds like a maybe. I hear "no" more in a day than most sales teams hear in a month. Nobody else has this database because nobody else is doing what I'm doing.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Your team's top 5 objection responses tested against 20+ real rejection patterns. Each marked: "This would work on me" / "This makes me hang up faster" / "This is the worst thing you could say." Plus rewritten responses using language that lands in 2026 — not 2015.
-          </div>
-          <div class="offering-price">$450 NZD</div>
-        </div>
-
-        <!-- 2. LEADERSHIP -->
-        <div class="service-offering">
-          <div class="offering-tag">Leadership · The view you'll never get internally</div>
-          <div class="offering-title">The View From Below</div>
-          <div class="offering-desc">
-            Your 360 review comes from peers. Your engagement survey is filtered through anonymity and fear. Your culture deck says you're "transparent and empowering." But you'll <strong>never hear what your leadership actually looks like to the person at the bottom</strong> — the entry-level employee who sees the gap between what you say in the all-hands and what happens on the floor. I'm that person. I'll review your internal comms, all-hands scripts, and culture initiatives, and tell you exactly how they land on someone with no power to push back.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Review of your last 3 internal communications with a "how this reads from the bottom" breakdown. Every element flagged: "This would make me go harder" / "I'd roll my eyes" / "This sounds like every other company." Plus rewritten versions in language entry-level people actually respect.
-          </div>
-          <div class="offering-price">$600 NZD</div>
-        </div>
-
-        <!-- 3. AI -->
-        <div class="service-offering">
-          <div class="offering-tag">AI · No hype, just what actually works</div>
-          <div class="offering-title">The AI Reality Check</div>
-          <div class="offering-desc">
-            Every consultant is selling you "AI transformation." Slide decks, maturity models, synergy. But when was the last time your AI consultant actually <em>built</em> something? I tinker with AI daily — not as a developer, but as someone who uses it like breathing and documents what works publicly. <strong>I'll audit your AI plans and tell you: this will save your team hours / this is expensive hype / your team will never adopt this.</strong> No jargon. Just "I've tried this and here's what happened."
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Audit of your current or planned AI stack with a reality score for each tool: "Your team will use this daily" / "Nice to have" / "Waste of money." Plus 3 AI implementations that will actually save 5+ hours/week — with tested prompts and step-by-step setup guides.
-          </div>
-          <div class="offering-price">$700 NZD</div>
-        </div>
-
-        <!-- 4. BUSINESS -->
-        <div class="service-offering">
-          <div class="offering-tag">Business · Red-team your strategy</div>
-          <div class="offering-title">The Bullshit Filter</div>
-          <div class="offering-desc">
-            Your pitch deck sounds incredible in the boardroom. Everyone nods. But does it survive contact with someone who's <strong>numerate, skeptical, outside your industry, and has no incentive to be polite?</strong> I'll red-team your strategy, value proposition, or investor pitch. Every claim stress-tested: "This checks out" / "I don't believe this number" / "This means nothing outside your bubble." You get scrutiny your team won't give you because they're invested in yes, and your investors won't give you because they've already decided. I have no stake in your outcome.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Line-by-line teardown of your strategy doc or pitch deck (up to 20 pages). Every claim marked: "Verifiable and compelling" / "I don't believe this" / "This is jargon that means nothing." Plus the 3 weakest claims rewritten into language a skeptical outsider would buy.
-          </div>
-          <div class="offering-price">$800 NZD</div>
-        </div>
-
-        <!-- 5. PERFORMANCE -->
-        <div class="service-offering">
-          <div class="offering-tag">Performance · From backstage to boardroom</div>
-          <div class="offering-title">The Performance Review</div>
-          <div class="offering-desc">
-            I spent four years as a professional makeup artist in theatre — backstage at Mary Poppins and CATS, working under pressure with a countdown to curtain. Theatre taught me something most trainers will never understand: <strong>what you say matters less than how you deliver it.</strong> Pacing. Timing. The pause before the key line. The energy shift from rapport to pitch. Your team's calls and presentations are performances — and right now, most of them are amateur theatre.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Review of 3 recorded calls or presentations. Each scored on 8 performance dimensions: opening energy, pacing, pause usage, tonal shifts, rapport authenticity, pitch delivery, objection recovery, and close. Each person gets a one-pager: what's working, what's killing it, and the one delivery change that would transform their next call.
-          </div>
-          <div class="offering-price">$550 NZD</div>
-        </div>
-
-        <!-- 6. BUSINESS / SALES -->
-        <div class="service-offering">
-          <div class="offering-tag">Business · I am your next buyer</div>
-          <div class="offering-title">The Generational Gap Audit</div>
-          <div class="offering-desc">
-            Your sales playbook was written by someone your age, for someone your age, to sell to someone your age. The problem: your buyers are getting younger. The person evaluating your software, sitting through your demo, recommending your product — they're 25-35, they've been marketed to since birth, they can smell corporate jargon across the room, and they make decisions differently. <strong>I'm that person.</strong> Not someone who studied your next buyer. Someone who IS your next buyer. The gap between how you sell and how I buy is where your deals are dying.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Full audit of your sales motion — cold emails, LinkedIn outreach, discovery scripts, demo flow, website, case studies — through the lens of your actual next-generation buyer. Every element flagged: "This earns my trust" / "I'd tune out here" / "This makes you sound like every other vendor." Plus a prioritised 30-day fix plan with rewritten messaging for your top 5 touchpoints.
-          </div>
-          <div class="offering-price">$800 NZD</div>
-        </div>
-
-        <!-- 7. SALES / INTELLIGENCE -->
-        <div class="service-offering">
-          <div class="offering-tag">Sales · From the trenches, not the tower</div>
-          <div class="offering-title">The Frontline Brief</div>
-          <div class="offering-desc">
-            Your CRM tells you what closed. Your dashboards tell you what tracked. Your managers tell you what they think you want to hear. <strong>None of them tell you what's actually working on the phones right now.</strong> I make 40+ cold calls a day to strangers asking for money. I know what opens are dying, what objections are trending, what prospects are tired of hearing, and what's actually breaking through the noise — in real time, not from a 2022 report. You can't get this from an analyst because analysts don't make cold calls. You can't get this from your team because they filter everything.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Monthly intelligence brief on the state of cold outreach from the trenches. What openings are dying. What objections are trending. What prospects are tired of hearing. What's actually breaking through. Includes specific language patterns, timing data, and 3 actionable recommendations your team can implement the same day.
-          </div>
-          <div class="offering-price">$650 NZD / month</div>
-        </div>
-
-        <!-- 8. CUSTOMER EXPERIENCE -->
-        <div class="service-offering">
-          <div class="offering-tag">Customer Experience · From someone who's been on the calls</div>
-          <div class="offering-title">The De-escalation Playbook</div>
-          <div class="offering-desc">
-            I spent 6 months in insurance customer service — high-volume, high-stakes, emotionally charged. I've taken the angry calls. The crying calls. The "I want to speak to your manager" calls. The calls where someone's life just changed and you're the first person they reached. <strong>Most "customer experience" consultants have never taken a single angry call.</strong> I've taken hundreds. I know what de-escalates and what pours petrol on the fire — not from a framework, but from being the person on the other end of the line. I'll review your customer service scripts, escalation protocols, and recovery processes, and tell you what actually works when emotions are high and trust is gone.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Audit of your customer service scripts, escalation matrix, and complaint recovery process. Every script tested against real emotional scenarios I've personally handled: "This would calm me down" / "This would make me angrier" / "This sounds like you're reading a policy, not talking to a person." Plus rewritten scripts for your 5 most common escalation scenarios.
-          </div>
-          <div class="offering-price">$500 NZD</div>
-        </div>
-
-        <!-- 9. BUSINESS / POLITICS -->
-        <div class="service-offering">
-          <div class="offering-tag">Business & Politics · Local intel, not consultancy reports</div>
-          <div class="offering-title">The NZ Ground Truth Brief</div>
-          <div class="offering-desc">
-            Thinking about entering New Zealand? You can buy a market entry report from a multinational consultancy that's never lived here. Or you can talk to someone who <strong>lives here, analyzes the data publicly, and knows the actual landscape</strong> — regulatory, economic, political, cultural. I've built entire repositories on NZ housing, cost of living, and policy because I care about the numbers. I know what the Stats NZ data actually says vs. what the government press releases claim. I know the cultural nuance that international companies miss. I know which "NZ market opportunity" reports are recycled from Australia with a find-and-replace. You can't get this from a Sydney-based consultant who flew in for a week.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> 10-15 page brief covering: actual market sizing from Stats NZ data (not recycled AU numbers), regulatory landscape, political risk assessment, competitive analysis, cultural pitfalls to avoid, and a GTM roadmap that accounts for NZ-specific dynamics (small market, relationship-driven, tall poppy syndrome). All sources cited inline.
-          </div>
-          <div class="offering-price">$750 NZD</div>
-        </div>
-
-        <!-- 10. LEADERSHIP / RECRUITMENT -->
-        <div class="service-offering">
-          <div class="offering-tag">Leadership · What your hiring process looks like to me</div>
-          <div class="offering-title">The Unfiltered Hire</div>
-          <div class="offering-desc">
-            You're trying to attract hungry, early-career talent — people like me. Self-taught, building in public, no fancy degree, but relentless. The problem: your job listings, your interview process, and your onboarding are <strong>designed by people who've never been an entry-level candidate recently.</strong> They're full of requirements that scare off exactly the people you want. I know, because I'm going through it right now. I'll review your job postings, interview process, and onboarding plan, and tell you what makes someone like me apply vs. what makes me close the tab and move on. Most recruitment consultants haven't been a candidate in years. I'm one right now.
-          </div>
-          <div class="offering-deliverables">
-            <strong>You get:</strong> Review of 3 job postings + your interview process + onboarding plan. Every element flagged: "This would make me apply immediately" / "I'd scroll past this" / "This requirement is scaring off your best candidates." Plus rewritten job postings and a restructured interview process designed to attract self-taught, non-traditional talent — not filter it out.
-          </div>
-          <div class="offering-price">$550 NZD</div>
-        </div>
-
-      </div>
-      <p class="services-note">
-        <strong>These aren't for everyone.</strong> They're for leaders who'd rather hear the truth from the trenches than another framework from a consultant who hasn't made a cold call since 2019. One-time engagements, no retainer, no upsell. DM me on LinkedIn.
-      </p>
-    </section>
-
-    <section class="animate delay-5">
       <h2 class="section-title">Latest Writing</h2>
       <div class="card-stack">
         <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="writing-card" style="text-decoration: none; color: inherit; display: block;"><div class="writing-title">What I Learned About Sales From Being the One Nobody Wants to Talk To</div><div class="writing-desc">Part 1 of a 5-part series on what the bottom of the ladder teaches you about sales. Objections as maps, not walls.</div><div class="writing-link">Read on Substack →</div></a>
       </div>
     </section>
 
-    <section class="animate delay-6">
+    <section class="animate delay-5">
       <h2 class="section-title">About Me</h2>
       <div class="about-card">
         <p class="about-text">I'm an early-career professional in Auckland building a career in sales, AI, and telecoms from the ground up. I believe exceptional sales isn't about high-pressure selling — it's about <span class="highlight">active listening</span>, deep curiosity, and helping people solve real problems.</p>
@@ -282,7 +124,7 @@
       </div>
     </section>
 
-    <section class="animate delay-7">
+    <section class="animate delay-6">
       <h2 class="section-title">Connect &amp; Collaborate</h2>
       <div class="connect-grid">
         <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="connect-btn"><svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.612V24h21.08V10.612H1.46zM6.602 18.93H3.294v-2.01h3.308v2.01zm0-3.676H3.294v-2.01h3.308v2.01zm5.825 3.676H9.119v-2.01h3.308v2.01zm0-3.676H9.119v-2.01h3.308v2.01zm5.825 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zm5.826 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zM1.46 4.273V1.437h21.08v2.836H1.46z"/></svg><span>Substack</span></a>
@@ -292,7 +134,7 @@
       </div>
     </section>
 
-    <footer class="animate delay-8"><p>&copy; 2026 Zephr Brennan &middot; <span>Building in public</span></p></footer>
+    <footer class="animate delay-7"><p>&copy; 2026 Zephr Brennan &middot; <span>Building in public</span></p></footer>
   </main>
 </body>
 </html>
