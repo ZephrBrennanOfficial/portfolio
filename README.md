@@ -9,9 +9,11 @@ My professional portfolio — built from scratch with HTML/CSS, hosted on GitHub
 ## What's On It
 
 - **Hero** — name, title, "Building in public" badge
-- **What I'm Learning** — three cards: Sales Strategy, Call Analysis, Market Analysis
-- **Portfolio Grid** — links to all my GitHub repos with descriptions and tags
-- **Connect** — Twitter, LinkedIn
+- **What I'm Learning** — three cards: Sales Strategy, Sales Psychology, Business Analysis
+- **Portfolio Grid** — links to all my active GitHub repos with descriptions and tags
+- **Latest Writing** — featured Substack article with link
+- **About Me** — background, current role, and philosophy
+- **Connect** — Substack, LinkedIn, GitHub, Twitter/X
 
 ## Tech
 
