@@ -40,35 +40,22 @@
     h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
     a { color: var(--gold-dark); text-decoration: none; }
     a:hover { color: var(--black); }
-
-    /* Scroll progress bar */
     .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--gold-shimmer); z-index: 9999; transition: width 0.1s ease; box-shadow: 0 0 8px rgba(197, 165, 88, 0.4); }
-
-    /* Scroll-to-top button */
     .scroll-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border-radius: 50%; background: var(--black); color: var(--gold); border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; z-index: 9998; box-shadow: var(--shadow-md); }
     .scroll-top.visible { opacity: 1; transform: translateY(0); }
     .scroll-top:hover { background: var(--gold); color: var(--black); transform: translateY(-3px); box-shadow: var(--shadow-gold); }
     .scroll-top svg { width: 20px; height: 20px; }
-
-    /* Pattern divider with ornamental center */
     .pattern-divider { width: 100%; height: 24px; background-color: var(--black); background-image: repeating-linear-gradient(45deg, transparent 0, transparent 8px, var(--gold) 8px, var(--gold) 10px, transparent 10px, transparent 18px, var(--gold-light) 18px, var(--gold-light) 20px); position: relative; }
     .pattern-divider::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 32px; height: 32px; background: var(--black); border: 2px solid var(--gold); border-radius: 50%; }
     .pattern-divider::before { content: '✦'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--gold); font-size: 14px; z-index: 1; }
-
     .container { max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
-
-    /* Animations */
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
     @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(197, 165, 88, 0.2); } 50% { box-shadow: 0 0 40px rgba(197, 165, 88, 0.35); } }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
     .animate { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
     .delay-1 { animation-delay: 0.05s; } .delay-2 { animation-delay: 0.12s; } .delay-3 { animation-delay: 0.2s; }
     .delay-4 { animation-delay: 0.28s; } .delay-5 { animation-delay: 0.36s; } .delay-6 { animation-delay: 0.44s; }
     .delay-7 { animation-delay: 0.52s; } .delay-8 { animation-delay: 0.6s; } .delay-9 { animation-delay: 0.68s; }
-    .delay-10 { animation-delay: 0.76s; }
-
-    /* Hero — black with generated art background */
     .hero { background: var(--black); color: var(--white); padding: 5rem 0 4.5rem; position: relative; overflow: hidden; }
     .hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://media.base44.com/images/public/6a6e5d661c68f94a6ec47f21/6bab502c1_generated_image.png'); background-size: cover; background-position: center; opacity: 0.35; }
     .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, transparent, var(--black)); pointer-events: none; }
@@ -87,26 +74,18 @@
     .hero-cta::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s ease; }
     .hero-cta:hover::before { left: 100%; }
     .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(197, 165, 88, 0.35); }
-
-    /* Hero decorative corners */
     .hero-corner { position: absolute; width: 60px; height: 60px; border: 1px solid rgba(197, 165, 88, 0.2); pointer-events: none; }
     .hero-corner.tl { top: 24px; left: 24px; border-right: none; border-bottom: none; }
     .hero-corner.tr { top: 24px; right: 24px; border-left: none; border-bottom: none; }
     .hero-corner.bl { bottom: 24px; left: 24px; border-right: none; border-top: none; }
     .hero-corner.br { bottom: 24px; right: 24px; border-left: none; border-top: none; }
-
-    /* Body sections */
     section { padding: 3.5rem 0; position: relative; }
     .section-title { font-family: 'Fraunces', serif; font-size: 1.45rem; font-weight: 700; color: var(--black); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; letter-spacing: -0.02em; }
     .section-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin-left: 0.5rem; }
     .section-label { font-size: 0.78rem; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem; }
     .section-label svg { width: 14px; height: 14px; }
-
-    /* Custom SVG icon styling */
     .icon-svg { width: 28px; height: 28px; stroke: var(--gold-dark); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 0.6rem; transition: all 0.3s ease; }
-    .value-card:hover .icon-svg, .learning-item:hover .icon-svg { stroke: var(--gold); transform: scale(1.1); }
-
-    /* Value cards with flip effect */
+    .value-card:hover .icon-svg { stroke: var(--gold); transform: scale(1.1); }
     .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     @media (max-width: 540px) { .values-grid { grid-template-columns: 1fr; } }
     .value-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.6rem 1.5rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
@@ -115,8 +94,6 @@
     .value-card:hover::before { transform: scaleX(1); }
     .value-card h3 { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 0.35rem; }
     .value-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
-
-    /* Learning list with animated left border */
     .learning-list { display: flex; flex-direction: column; gap: 0.75rem; }
     .learning-item { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius-sm); padding: 1.2rem 1.4rem; display: flex; gap: 0.9rem; align-items: flex-start; transition: all 0.3s ease; position: relative; overflow: hidden; }
     .learning-item::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold); transform: scaleY(0); transform-origin: top; transition: transform 0.3s ease; }
@@ -125,8 +102,6 @@
     .learning-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; box-shadow: 0 0 0 3px rgba(197, 165, 88, 0.15); }
     .learning-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 0.25rem; }
     .learning-item p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; }
-
-    /* Cards (repos, writing) with shine effect */
     .card-stack { display: flex; flex-direction: column; gap: 0.875rem; }
     .card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.4rem 1.5rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
     .card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(197, 165, 88, 0.04) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
@@ -141,8 +116,6 @@
     .project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
     .tag { font-size: 0.72rem; padding: 3px 10px; border-radius: 6px; background: var(--gold-pale); color: var(--gold-dark); border: 1px solid var(--gold-light); font-weight: 500; transition: all 0.2s ease; }
     a.card:hover .tag { background: var(--gold); color: var(--white); border-color: var(--gold); }
-
-    /* Offer card with gold glow */
     .offer-card { background: var(--white); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.75rem 1.75rem; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
     .offer-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold-shimmer); background-size: 200% auto; animation: shimmer 3s linear infinite; }
     .offer-card:hover { box-shadow: var(--shadow-gold); border-color: var(--gold-dark); transform: translateY(-4px); }
@@ -150,8 +123,6 @@
     .offer-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.85rem; }
     .offer-link { font-size: 0.88rem; font-weight: 600; color: var(--gold-dark); display: inline-flex; align-items: center; gap: 0.4rem; transition: gap 0.2s ease; }
     .offer-card:hover .offer-link { gap: 0.7rem; }
-
-    /* Writing card */
     .writing-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.4rem 1.5rem; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
     .writing-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold); transform: scaleY(0); transition: transform 0.3s ease; }
     .writing-card:hover { box-shadow: var(--shadow-md); border-color: var(--gold); transform: translateY(-4px); }
@@ -159,16 +130,12 @@
     .writing-title { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 0.4rem; line-height: 1.4; font-family: 'Fraunces', serif; }
     .writing-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.6rem; }
     .writing-link { font-size: 0.85rem; font-weight: 600; color: var(--gold-dark); }
-
-    /* About card with decorative quote mark */
     .about-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 2.25rem 2rem; position: relative; }
     .about-card::before { content: '"'; position: absolute; top: -10px; left: 1.5rem; font-family: 'Fraunces', serif; font-size: 4rem; color: var(--gold); opacity: 0.25; line-height: 1; }
     .about-card p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.85; }
     .about-card p + p { margin-top: 1rem; }
     .about-card strong { color: var(--black); }
     .about-card .highlight { color: var(--gold-dark); font-weight: 600; }
-
-    /* Aspiration section with generated image */
     .aspiration-section { position: relative; overflow: hidden; }
     .aspiration-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://media.base44.com/images/public/6a6e5d661c68f94a6ec47f21/12de7a03e_generated_image.png'); background-size: cover; background-position: center; opacity: 0.12; pointer-events: none; }
     .aspiration-card { background: linear-gradient(135deg, var(--beige-mid), var(--gold-pale)); border: 1px solid var(--gold-light); border-radius: var(--radius); padding: 2.5rem 2.25rem; position: relative; z-index: 1; box-shadow: var(--shadow-sm); }
@@ -178,8 +145,6 @@
     .aspiration-card strong { color: var(--black); }
     .aspiration-card .quote { font-family: 'Fraunces', serif; font-size: 1.25rem; color: var(--gold-dark); line-height: 1.5; margin-bottom: 1.5rem; font-style: italic; font-weight: 600; position: relative; padding-left: 1.5rem; }
     .aspiration-card .quote::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 3px; background: var(--gold); border-radius: 2px; }
-
-    /* Connect with hover icon animation */
     .connect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
     @media (max-width: 420px) { .connect-grid { grid-template-columns: 1fr; } }
     .connect-btn { display: flex; align-items: center; gap: 0.65rem; padding: 1.1rem 1.35rem; background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius-sm); color: var(--black); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden; }
@@ -188,8 +153,6 @@
     .connect-btn:hover::before { transform: scaleX(1); }
     .connect-btn svg { width: 20px; height: 20px; fill: var(--gold-dark); transition: all 0.3s ease; }
     .connect-btn:hover svg { fill: var(--black); transform: scale(1.1); }
-
-    /* Footer — black with gold ornament */
     footer { background: var(--black); color: rgba(255, 255, 255, 0.5); padding: 3.5rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
     .footer-pattern { height: 20px; margin-bottom: 2.5rem; background-image: repeating-linear-gradient(90deg, transparent 0, transparent 20px, var(--gold) 20px, var(--gold) 22px, transparent 22px, transparent 40px, var(--gold-light) 40px, var(--gold-light) 42px); opacity: 0.3; }
     .footer-ornament { width: 40px; height: 40px; margin: 0 auto 1.5rem; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: glow-pulse 3s ease-in-out infinite; }
@@ -197,17 +160,11 @@
     .footer-logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; letter-spacing: -0.02em; }
     .footer-text { font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); }
     .footer-text span { color: var(--gold); }
-
-    /* Decorative section number */
     .section-num { position: absolute; top: 1.5rem; right: 1.5rem; font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 800; color: var(--gold); opacity: 0.06; pointer-events: none; }
   </style>
 </head>
 <body>
-
-  <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Scroll to top button -->
   <div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </div>
@@ -273,13 +230,6 @@
         <div class="learning-item">
           <div class="learning-dot"></div>
           <div>
-            <h3>Sales &amp; Business Strategy</h3>
-            <p>Building practical frameworks — discovery templates, objection handling scripts, cold outreach experiments, and market analysis. Studying what makes sales actually work, not what the textbooks say should work.</p>
-          </div>
-        </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <div>
             <h3>Writing — Substack Series</h3>
             <p>A 5-part series on what the bottom of the ladder teaches you about sales, trust, attention, and leadership. Written from the perspective of someone who's actually at the bottom — not pretending otherwise.</p>
           </div>
@@ -289,13 +239,6 @@
           <div>
             <h3>AI &amp; Tools</h3>
             <p>Tinkering with AI to build useful things — ghostwriting service sites, automated workflows, data analysis tools. Treating AI as a practical skill to develop, not a buzzword to chase.</p>
-          </div>
-        </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <div>
-            <h3>NZ Policy &amp; Data Analysis</h3>
-            <p>Data-driven analysis of Aotearoa's housing crisis, cost of living, and public policy. Numbers, context, and honest questions — no party lines.</p>
           </div>
         </div>
         <div class="learning-item">
@@ -343,7 +286,7 @@
     </div>
   </section>
 
-  <!-- Portfolio & Repos -->
+  <!-- Portfolio & Repos — Quill only -->
   <section class="animate delay-7">
     <div class="section-num">05</div>
     <div class="container">
@@ -354,26 +297,6 @@
           <div class="project-header"><div class="project-title">Quill — LinkedIn Ghostwriting</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
           <div class="project-desc">Professional LinkedIn ghostwriting service — sample posts, pricing, process, and contact forms.</div>
           <div class="project-tags"><span class="tag">Ghostwriting</span><span class="tag">LinkedIn</span><span class="tag">Service</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/sales-consulting-toolkit" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">Sales Consulting Toolkit</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Practical sales frameworks — audit checklists, discovery templates, ROI calculator, objection handling, and sales psychology.</div>
-          <div class="project-tags"><span class="tag">Sales</span><span class="tag">Frameworks</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/business-case-studies" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">Business Case Studies</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Practice case studies — market analysis, sales diagnostics, and revenue modeling.</div>
-          <div class="project-tags"><span class="tag">Analysis</span><span class="tag">NZ Market</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/sales-practice-lab" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">Sales Practice Lab</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Mock discovery calls, cold outreach experiments, book notes, and objection roleplay logs.</div>
-          <div class="project-tags"><span class="tag">Practice</span><span class="tag">Writing</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/nz-policy-analysis" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">NZ Policy Analysis</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Data-driven analysis of Aotearoa NZ housing, cost of living, and public policy.</div>
-          <div class="project-tags"><span class="tag">Data</span><span class="tag">NZ</span></div>
         </a>
       </div>
     </div>
@@ -395,7 +318,7 @@
     </div>
   </section>
 
-  <!-- Where I'm Heading with generated image -->
+  <!-- Where I'm Heading -->
   <section class="animate delay-9 aspiration-section">
     <div class="aspiration-bg"></div>
     <div class="section-num">07</div>
@@ -451,20 +374,14 @@
   </footer>
 
   <script>
-    // Scroll progress bar
     const progressBar = document.getElementById('scrollProgress');
     const scrollTopBtn = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => {
       const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       progressBar.style.width = scrolled + '%';
-      if (window.scrollY > 400) {
-        scrollTopBtn.classList.add('visible');
-      } else {
-        scrollTopBtn.classList.remove('visible');
-      }
+      if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); }
+      else { scrollTopBtn.classList.remove('visible'); }
     });
-
-    // Typing animation for tagline
     const taglineFull = "Writer · Builder · Lifelong Learner — Auckland, Aotearoa NZ";
     const taglineEl = document.getElementById('taglineText');
     let charIndex = 0;
@@ -476,8 +393,6 @@
       }
     }
     setTimeout(typeTagline, 800);
-
-    // Intersection Observer for scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
