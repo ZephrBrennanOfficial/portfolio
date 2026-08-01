@@ -14,33 +14,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --beige: #F5F1E8;
-      --beige-light: #FAF7F0;
-      --beige-mid: #EDE7D8;
-      --beige-border: #DDD5C2;
-      --black: #1a1a1a;
-      --black-soft: #2D2A26;
-      --white: #ffffff;
-      --gold: #C5A558;
-      --gold-dark: #A88A45;
-      --gold-light: #D4B970;
-      --gold-pale: #EDE3C8;
+      --beige: #F5F1E8; --beige-light: #FAF7F0; --beige-mid: #EDE7D8; --beige-border: #DDD5C2;
+      --black: #1a1a1a; --black-soft: #2D2A26; --white: #ffffff;
+      --gold: #C5A558; --gold-dark: #A88A45; --gold-light: #D4B970; --gold-pale: #EDE3C8;
       --gold-shimmer: linear-gradient(135deg, #C5A558 0%, #EDE3C8 50%, #C5A558 100%);
       --text-muted: #6B6358;
-      --shadow-sm: 0 2px 8px rgba(26, 26, 26, 0.06);
-      --shadow-md: 0 8px 24px rgba(26, 26, 26, 0.08);
-      --shadow-lg: 0 16px 48px rgba(26, 26, 26, 0.12);
-      --shadow-gold: 0 8px 32px rgba(197, 165, 88, 0.15);
-      --radius: 16px;
-      --radius-sm: 10px;
+      --shadow-sm: 0 2px 8px rgba(26,26,26,0.06); --shadow-md: 0 8px 24px rgba(26,26,26,0.08);
+      --shadow-lg: 0 16px 48px rgba(26,26,26,0.12); --shadow-gold: 0 8px 32px rgba(197,165,88,0.15);
+      --radius: 16px; --radius-sm: 10px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; background-color: var(--beige); }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--black); line-height: 1.7; background-color: var(--beige); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
-    a { color: var(--gold-dark); text-decoration: none; }
-    a:hover { color: var(--black); }
-    .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--gold-shimmer); z-index: 9999; transition: width 0.1s ease; box-shadow: 0 0 8px rgba(197, 165, 88, 0.4); }
+    a { color: var(--gold-dark); text-decoration: none; } a:hover { color: var(--black); }
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--gold-shimmer); z-index: 9999; transition: width 0.1s ease; box-shadow: 0 0 8px rgba(197,165,88,0.4); }
     .scroll-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border-radius: 50%; background: var(--black); color: var(--gold); border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; z-index: 9998; box-shadow: var(--shadow-md); }
     .scroll-top.visible { opacity: 1; transform: translateY(0); }
     .scroll-top:hover { background: var(--gold); color: var(--black); transform: translateY(-3px); box-shadow: var(--shadow-gold); }
@@ -51,16 +39,17 @@
     .container { max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
-    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(197, 165, 88, 0.2); } 50% { box-shadow: 0 0 40px rgba(197, 165, 88, 0.35); } }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(197,165,88,0.2); } 50% { box-shadow: 0 0 40px rgba(197,165,88,0.35); } }
     .animate { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
     .delay-1 { animation-delay: 0.05s; } .delay-2 { animation-delay: 0.12s; } .delay-3 { animation-delay: 0.2s; }
     .delay-4 { animation-delay: 0.28s; } .delay-5 { animation-delay: 0.36s; } .delay-6 { animation-delay: 0.44s; }
     .delay-7 { animation-delay: 0.52s; } .delay-8 { animation-delay: 0.6s; } .delay-9 { animation-delay: 0.68s; }
+    .delay-10 { animation-delay: 0.76s; }
     .hero { background: var(--black); color: var(--white); padding: 5rem 0 4.5rem; position: relative; overflow: hidden; }
     .hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://media.base44.com/images/public/6a6e5d661c68f94a6ec47f21/6bab502c1_generated_image.png'); background-size: cover; background-position: center; opacity: 0.35; }
     .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, transparent, var(--black)); pointer-events: none; }
     .hero .container { position: relative; z-index: 2; }
-    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 9999px; background: rgba(197, 165, 88, 0.08); border: 1px solid rgba(197, 165, 88, 0.25); color: var(--gold-light); font-size: 0.825rem; font-weight: 500; margin-bottom: 1.75rem; letter-spacing: 0.01em; backdrop-filter: blur(4px); }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 9999px; background: rgba(197,165,88,0.08); border: 1px solid rgba(197,165,88,0.25); color: var(--gold-light); font-size: 0.825rem; font-weight: 500; margin-bottom: 1.75rem; letter-spacing: 0.01em; backdrop-filter: blur(4px); }
     .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold); position: relative; }
     .pulse-dot::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; background-color: var(--gold); animation: pulseRing 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
     @keyframes pulseRing { 0% { transform: scale(0.9); opacity: 0.8; } 70% { transform: scale(2.2); opacity: 0; } 100% { transform: scale(2.2); opacity: 0; } }
@@ -68,13 +57,13 @@
     .hero-tagline { font-size: 1.05rem; font-weight: 600; color: var(--gold); margin-bottom: 1.35rem; letter-spacing: -0.01em; min-height: 1.5em; }
     .hero-tagline .cursor { display: inline-block; width: 2px; height: 1.1em; background: var(--gold); margin-left: 2px; animation: blink 0.8s infinite; vertical-align: text-bottom; }
     @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-    .hero-bio { color: rgba(255, 255, 255, 0.72); font-size: 1.02rem; line-height: 1.75; margin-bottom: 2rem; max-width: 520px; }
+    .hero-bio { color: rgba(255,255,255,0.72); font-size: 1.02rem; line-height: 1.75; margin-bottom: 2rem; max-width: 520px; }
     .hero-bio strong { color: var(--white); }
     .hero-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.95rem 2.1rem; background: var(--gold); color: var(--black) !important; border-radius: 9999px; font-size: 0.92rem; font-weight: 700; font-family: 'Inter', sans-serif; transition: all 0.3s ease; position: relative; overflow: hidden; }
     .hero-cta::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s ease; }
     .hero-cta:hover::before { left: 100%; }
-    .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(197, 165, 88, 0.35); }
-    .hero-corner { position: absolute; width: 60px; height: 60px; border: 1px solid rgba(197, 165, 88, 0.2); pointer-events: none; }
+    .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(197,165,88,0.35); }
+    .hero-corner { position: absolute; width: 60px; height: 60px; border: 1px solid rgba(197,165,88,0.2); pointer-events: none; }
     .hero-corner.tl { top: 24px; left: 24px; border-right: none; border-bottom: none; }
     .hero-corner.tr { top: 24px; right: 24px; border-left: none; border-bottom: none; }
     .hero-corner.bl { bottom: 24px; left: 24px; border-right: none; border-top: none; }
@@ -85,7 +74,7 @@
     .section-label { font-size: 0.78rem; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem; }
     .section-label svg { width: 14px; height: 14px; }
     .icon-svg { width: 28px; height: 28px; stroke: var(--gold-dark); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 0.6rem; transition: all 0.3s ease; }
-    .value-card:hover .icon-svg { stroke: var(--gold); transform: scale(1.1); }
+    .value-card:hover .icon-svg, .learning-item:hover .icon-svg { stroke: var(--gold); transform: scale(1.1); }
     .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     @media (max-width: 540px) { .values-grid { grid-template-columns: 1fr; } }
     .value-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.6rem 1.5rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
@@ -99,12 +88,12 @@
     .learning-item::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold); transform: scaleY(0); transform-origin: top; transition: transform 0.3s ease; }
     .learning-item:hover { box-shadow: var(--shadow-sm); border-color: var(--gold-light); transform: translateX(4px); }
     .learning-item:hover::after { transform: scaleY(1); }
-    .learning-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; box-shadow: 0 0 0 3px rgba(197, 165, 88, 0.15); }
+    .learning-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; box-shadow: 0 0 0 3px rgba(197,165,88,0.15); }
     .learning-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 0.25rem; }
     .learning-item p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; }
     .card-stack { display: flex; flex-direction: column; gap: 0.875rem; }
     .card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.4rem 1.5rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
-    .card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(197, 165, 88, 0.04) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
+    .card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(197,165,88,0.04) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
     a.card { text-decoration: none; color: inherit; display: block; }
     a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--gold); }
     a.card:hover::before { opacity: 1; }
@@ -153,12 +142,12 @@
     .connect-btn:hover::before { transform: scaleX(1); }
     .connect-btn svg { width: 20px; height: 20px; fill: var(--gold-dark); transition: all 0.3s ease; }
     .connect-btn:hover svg { fill: var(--black); transform: scale(1.1); }
-    footer { background: var(--black); color: rgba(255, 255, 255, 0.5); padding: 3.5rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
+    footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3.5rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
     .footer-pattern { height: 20px; margin-bottom: 2.5rem; background-image: repeating-linear-gradient(90deg, transparent 0, transparent 20px, var(--gold) 20px, var(--gold) 22px, transparent 22px, transparent 40px, var(--gold-light) 40px, var(--gold-light) 42px); opacity: 0.3; }
     .footer-ornament { width: 40px; height: 40px; margin: 0 auto 1.5rem; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: glow-pulse 3s ease-in-out infinite; }
     .footer-ornament svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
     .footer-logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-    .footer-text { font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); }
+    .footer-text { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
     .footer-text span { color: var(--gold); }
     .section-num { position: absolute; top: 1.5rem; right: 1.5rem; font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 800; color: var(--gold); opacity: 0.06; pointer-events: none; }
   </style>
@@ -169,13 +158,10 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </div>
 
-  <!-- Hero -->
   <header class="hero">
     <div class="hero-bg"></div>
-    <div class="hero-corner tl"></div>
-    <div class="hero-corner tr"></div>
-    <div class="hero-corner bl"></div>
-    <div class="hero-corner br"></div>
+    <div class="hero-corner tl"></div><div class="hero-corner tr"></div>
+    <div class="hero-corner bl"></div><div class="hero-corner br"></div>
     <div class="container">
       <div class="badge animate delay-1"><span class="pulse-dot"></span>Building in Public</div>
       <h1 class="hero-name animate delay-2">Zephr Brennan</h1>
@@ -187,7 +173,6 @@
 
   <div class="pattern-divider"></div>
 
-  <!-- What I Stand For -->
   <section class="animate delay-3">
     <div class="section-num">01</div>
     <div class="container">
@@ -220,13 +205,19 @@
 
   <div class="pattern-divider"></div>
 
-  <!-- What I'm Learning & Creating -->
   <section class="animate delay-4">
     <div class="section-num">02</div>
     <div class="container">
       <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Current Work</p>
       <h2 class="section-title">What I'm Learning &amp; Creating</h2>
       <div class="learning-list">
+        <div class="learning-item">
+          <div class="learning-dot"></div>
+          <div>
+            <h3>Sales &amp; Business Strategy</h3>
+            <p>Building practical frameworks — discovery templates, objection handling scripts, cold outreach experiments, and market analysis. Studying what makes sales actually work, not what the textbooks say should work.</p>
+          </div>
+        </div>
         <div class="learning-item">
           <div class="learning-dot"></div>
           <div>
@@ -244,6 +235,13 @@
         <div class="learning-item">
           <div class="learning-dot"></div>
           <div>
+            <h3>NZ Policy &amp; Data Analysis</h3>
+            <p>Data-driven analysis of Aotearoa's housing crisis, cost of living, and public policy. Numbers, context, and honest questions — no party lines.</p>
+          </div>
+        </div>
+        <div class="learning-item">
+          <div class="learning-dot"></div>
+          <div>
             <h3>LinkedIn Ghostwriting (Quill)</h3>
             <p>A professional ghostwriting service for founders who should be posting but don't have time. Voice capture, post writing, engagement tracking — the full process. First 4 posts free.</p>
           </div>
@@ -252,7 +250,7 @@
     </div>
   </section>
 
-  <!-- What I Offer -->
+  <!-- What I Offer — Quill only -->
   <section class="animate delay-5">
     <div class="section-num">03</div>
     <div class="container">
@@ -270,7 +268,6 @@
 
   <div class="pattern-divider"></div>
 
-  <!-- My Writing -->
   <section class="animate delay-6">
     <div class="section-num">04</div>
     <div class="container">
@@ -286,7 +283,6 @@
     </div>
   </section>
 
-  <!-- Portfolio & Repos — Quill only -->
   <section class="animate delay-7">
     <div class="section-num">05</div>
     <div class="container">
@@ -298,13 +294,32 @@
           <div class="project-desc">Professional LinkedIn ghostwriting service — sample posts, pricing, process, and contact forms.</div>
           <div class="project-tags"><span class="tag">Ghostwriting</span><span class="tag">LinkedIn</span><span class="tag">Service</span></div>
         </a>
+        <a href="https://github.com/ZephrBrennanOfficial/sales-consulting-toolkit" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="project-header"><div class="project-title">Sales Consulting Toolkit</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
+          <div class="project-desc">Practical sales frameworks — audit checklists, discovery templates, ROI calculator, objection handling, and sales psychology.</div>
+          <div class="project-tags"><span class="tag">Sales</span><span class="tag">Frameworks</span></div>
+        </a>
+        <a href="https://github.com/ZephrBrennanOfficial/business-case-studies" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="project-header"><div class="project-title">Business Case Studies</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
+          <div class="project-desc">Practice case studies — market analysis, sales diagnostics, and revenue modeling.</div>
+          <div class="project-tags"><span class="tag">Analysis</span><span class="tag">NZ Market</span></div>
+        </a>
+        <a href="https://github.com/ZephrBrennanOfficial/sales-practice-lab" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="project-header"><div class="project-title">Sales Practice Lab</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
+          <div class="project-desc">Mock discovery calls, cold outreach experiments, book notes, and objection roleplay logs.</div>
+          <div class="project-tags"><span class="tag">Practice</span><span class="tag">Writing</span></div>
+        </a>
+        <a href="https://github.com/ZephrBrennanOfficial/nz-policy-analysis" target="_blank" rel="noopener noreferrer" class="card">
+          <div class="project-header"><div class="project-title">NZ Policy Analysis</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
+          <div class="project-desc">Data-driven analysis of Aotearoa NZ housing, cost of living, and public policy.</div>
+          <div class="project-tags"><span class="tag">Data</span><span class="tag">NZ</span></div>
+        </a>
       </div>
     </div>
   </section>
 
   <div class="pattern-divider"></div>
 
-  <!-- About Me -->
   <section class="animate delay-8">
     <div class="section-num">06</div>
     <div class="container">
@@ -318,7 +333,6 @@
     </div>
   </section>
 
-  <!-- Where I'm Heading -->
   <section class="animate delay-9 aspiration-section">
     <div class="aspiration-bg"></div>
     <div class="section-num">07</div>
@@ -336,7 +350,6 @@
 
   <div class="pattern-divider"></div>
 
-  <!-- Connect -->
   <section class="animate delay-10">
     <div class="section-num">08</div>
     <div class="container">
@@ -363,7 +376,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-pattern"></div>
     <div class="footer-ornament">
