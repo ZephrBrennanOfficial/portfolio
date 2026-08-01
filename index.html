@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zephr Brennan | Sales Learner & Builder</title>
   <meta name="description" content="Portfolio of Zephr Brennan — building a career in sales, AI & telecoms from the ground up in Auckland, NZ. Documenting the journey publicly.">
-
   <meta property="og:type" content="website">
   <meta property="og:title" content="Zephr Brennan | Sales Learner & Builder">
   <meta property="og:description" content="Building a career in sales from scratch — frameworks, practice reps, and analysis. Documenting everything in public from Auckland, NZ.">
@@ -14,23 +13,15 @@
   <meta name="twitter:title" content="Zephr Brennan | Sales Learner & Builder">
   <meta name="twitter:description" content="Building a career in sales from scratch — frameworks, practice reps, and analysis. Documenting everything in public from Auckland, NZ.">
   <meta name="twitter:creator" content="@ZephrBrennan">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #0b101a;
-      --card-bg: #161d2b;
-      --card-hover-bg: #1e293b;
-      --border-color: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(107, 159, 255, 0.4);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent-blue: #6B9FFF;
-      --accent-purple: #a78bfa;
-      --accent-green: #34d399;
-      --accent-gold: #fbbf24;
+      --bg-color: #0b101a; --card-bg: #161d2b; --card-hover-bg: #1e293b;
+      --border-color: rgba(255, 255, 255, 0.08); --border-hover: rgba(107, 159, 255, 0.4);
+      --text-main: #f8fafc; --text-muted: #94a3b8;
+      --accent-blue: #6B9FFF; --accent-purple: #a78bfa; --accent-green: #34d399; --accent-gold: #fbbf24;
       --accent-gradient: linear-gradient(135deg, #6B9FFF 0%, #a78bfa 100%);
       --glow-shadow: 0 8px 32px -6px rgba(107, 159, 255, 0.2);
     }
@@ -40,14 +31,9 @@
     .container { width: 100%; max-width: 600px; }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
     .animate { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
-    .delay-1 { animation-delay: 0.05s; }
-    .delay-2 { animation-delay: 0.15s; }
-    .delay-3 { animation-delay: 0.25s; }
-    .delay-4 { animation-delay: 0.35s; }
-    .delay-5 { animation-delay: 0.45s; }
-    .delay-6 { animation-delay: 0.55s; }
-    .delay-7 { animation-delay: 0.65s; }
-    .delay-8 { animation-delay: 0.75s; }
+    .delay-1 { animation-delay: 0.05s; } .delay-2 { animation-delay: 0.15s; } .delay-3 { animation-delay: 0.25s; }
+    .delay-4 { animation-delay: 0.35s; } .delay-5 { animation-delay: 0.45s; } .delay-6 { animation-delay: 0.55s; }
+    .delay-7 { animation-delay: 0.65s; } .delay-8 { animation-delay: 0.75s; }
     .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); color: #34d399; font-size: 0.825rem; font-weight: 500; margin-bottom: 1.25rem; letter-spacing: 0.01em; }
     .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; position: relative; }
     .pulse-dot::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; background-color: #10b981; animation: pulseRing 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
@@ -74,57 +60,30 @@
     .project-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.6rem; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
     .tag { font-size: 0.75rem; padding: 3px 9px; border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--accent-blue); border: 1px solid rgba(107, 159, 255, 0.15); font-weight: 500; }
-
-    /* Services — reworked */
-    .services-intro {
-      font-size: 0.95rem; color: var(--text-muted); line-height: 1.7;
-      margin-bottom: 1.5rem; padding: 1.1rem 1.2rem;
-      background: linear-gradient(135deg, rgba(107, 159, 255, 0.06), rgba(167, 139, 250, 0.04));
-      border: 1px solid rgba(107, 159, 255, 0.15); border-radius: 12px;
-    }
+    .services-intro { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; padding: 1.1rem 1.2rem; background: linear-gradient(135deg, rgba(107, 159, 255, 0.06), rgba(167, 139, 250, 0.04)); border: 1px solid rgba(107, 159, 255, 0.15); border-radius: 12px; }
     .services-intro strong { color: var(--text-main); font-weight: 600; }
     .services-intro em { color: var(--accent-blue); font-style: normal; font-weight: 500; }
-
     .service-offering { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.5rem 1.35rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
     .service-offering:hover { transform: translateY(-3px); background: var(--card-hover-bg); border-color: var(--border-hover); box-shadow: var(--glow-shadow); }
-
-    .offering-tag {
-      display: inline-block; font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.5rem;
-    }
+    .offering-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.5rem; }
     .offering-title { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
     .offering-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.8rem; }
     .offering-desc strong { color: var(--text-main); font-weight: 500; }
-    .offering-deliverables {
-      font-size: 0.84rem; color: var(--text-muted); line-height: 1.6;
-      padding-top: 0.7rem; border-top: 1px solid rgba(255,255,255,0.06);
-    }
+    .offering-deliverables { font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; padding-top: 0.7rem; border-top: 1px solid rgba(255,255,255,0.06); }
     .offering-deliverables strong { color: var(--accent-blue); font-weight: 500; }
-    .offering-price {
-      display: inline-block; margin-top: 0.8rem; font-size: 0.78rem; font-weight: 600;
-      color: var(--accent-green); padding: 4px 14px; border-radius: 6px;
-      background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.2);
-    }
-
-    .services-note {
-      margin-top: 1.25rem; font-size: 0.88rem; color: var(--text-muted);
-      text-align: center; line-height: 1.6; padding: 0.85rem 1rem;
-      background: rgba(255,255,255,0.02); border-radius: 8px;
-    }
+    .offering-price { display: inline-block; margin-top: 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent-green); padding: 4px 14px; border-radius: 6px; background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.2); }
+    .services-note { margin-top: 1.25rem; font-size: 0.88rem; color: var(--text-muted); text-align: center; line-height: 1.6; padding: 0.85rem 1rem; background: rgba(255,255,255,0.02); border-radius: 8px; }
     .services-note strong { color: var(--text-main); font-weight: 500; }
-
     .about-card { background: var(--card-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.5rem; }
     .about-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
     .about-text + .about-text { margin-top: 1rem; }
     .highlight { color: var(--text-main); font-weight: 500; }
-
     .writing-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.25rem 1.35rem; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
     .writing-card:hover { transform: translateY(-3px); background: var(--card-hover-bg); border-color: var(--border-hover); box-shadow: var(--glow-shadow); }
     .writing-title { font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.35rem; }
     .writing-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
     .writing-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; font-size: 0.875rem; font-weight: 500; color: var(--accent-blue); text-decoration: none; }
     .writing-link:hover { color: var(--accent-purple); }
-
     .connect-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
     @media (max-width: 540px) { .connect-grid { grid-template-columns: repeat(2, 1fr); } .hero-name { font-size: 2.25rem; } }
     .connect-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 0.8rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: all 0.25s ease; }
@@ -135,151 +94,103 @@
   </style>
 </head>
 <body>
-
   <main class="container">
 
-    <!-- Hero -->
     <header class="hero animate delay-1">
-      <div class="badge">
-        <span class="pulse-dot"></span>
-        Building in Public
-      </div>
+      <div class="badge"><span class="pulse-dot"></span>Building in Public</div>
       <h1 class="hero-name">Zephr Brennan</h1>
       <p class="hero-tagline">Telefundraiser | Building a career in sales, AI &amp; telecoms — one rep at a time</p>
-      <p class="hero-bio">
-        Documenting the journey from the bottom of the ladder — writing frameworks, building practical tools, practicing reps, and sharing everything publicly. Customer service was the best sales training I never asked for.
-      </p>
+      <p class="hero-bio">Documenting the journey from the bottom of the ladder — writing frameworks, building practical tools, practicing reps, and sharing everything publicly. Customer service was the best sales training I never asked for.</p>
     </header>
 
-    <!-- What I'm Learning -->
     <section class="animate delay-2">
       <h2 class="section-title">What I'm Learning</h2>
       <div class="card-stack">
-        <div class="card">
-          <div class="service-card">
-            <div class="service-icon">📊</div>
-            <div>
-              <div class="service-title">Sales Strategy &amp; Frameworks</div>
-              <div class="service-desc">Studying B2B sales methodology — MEDDPICC, Sandler, value-based selling. Building practical frameworks and audit tools.</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="service-card">
-            <div class="service-icon">🧠</div>
-            <div>
-              <div class="service-title">Sales Psychology &amp; Objection Handling</div>
-              <div class="service-desc">Understanding how decisions actually get made — pattern interrupts, trust anchors, curiosity gaps, and the psychology behind "no."</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="service-card">
-            <div class="service-icon">📈</div>
-            <div>
-              <div class="service-title">Business Analysis &amp; Market Data</div>
-              <div class="service-desc">Breaking down revenue models, pipeline velocity, CAC payback, and NZ market opportunities. Numbers first, opinions second.</div>
-            </div>
-          </div>
-        </div>
+        <div class="card"><div class="service-card"><div class="service-icon">📊</div><div><div class="service-title">Sales Strategy &amp; Frameworks</div><div class="service-desc">Studying B2B sales methodology — MEDDPICC, Sandler, value-based selling. Building practical frameworks and audit tools.</div></div></div></div>
+        <div class="card"><div class="service-card"><div class="service-icon">🧠</div><div><div class="service-title">Sales Psychology &amp; Objection Handling</div><div class="service-desc">Understanding how decisions actually get made — pattern interrupts, trust anchors, curiosity gaps, and the psychology behind "no."</div></div></div></div>
+        <div class="card"><div class="service-card"><div class="service-icon">📈</div><div><div class="service-title">Business Analysis &amp; Market Data</div><div class="service-desc">Breaking down revenue models, pipeline velocity, CAC payback, and NZ market opportunities. Numbers first, opinions second.</div></div></div></div>
       </div>
     </section>
 
-    <!-- Portfolio Grid -->
     <section class="animate delay-3">
       <h2 class="section-title">Portfolio</h2>
       <div class="card-stack">
-        <a href="https://github.com/ZephrBrennanOfficial/sales-consulting-toolkit" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header">
-            <div class="project-title">Sales Consulting Toolkit</div>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-          </div>
-          <div class="project-desc">Practical sales frameworks — audit checklists, discovery templates, ROI calculator, objection handling, and sales psychology.</div>
-          <div class="project-tags"><span class="tag">Sales</span><span class="tag">Frameworks</span><span class="tag">HTML/CSS</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/business-case-studies" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header">
-            <div class="project-title">Business Case Studies</div>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-          </div>
-          <div class="project-desc">Practice case studies — lead response analysis, NZ SaaS market sizing, sales diagnostics, and metrics that actually matter.</div>
-          <div class="project-tags"><span class="tag">Analysis</span><span class="tag">SaaS</span><span class="tag">NZ Market</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/sales-practice-lab" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header">
-            <div class="project-title">Sales Practice Lab</div>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-          </div>
-          <div class="project-desc">Mock discovery calls, cold outreach experiments, book notes, and objection roleplay logs — with honest self-critiques.</div>
-          <div class="project-tags"><span class="tag">Practice</span><span class="tag">Roleplay</span><span class="tag">Self-critique</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/nz-policy-analysis" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header">
-            <div class="project-title">NZ Policy Analysis</div>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-          </div>
-          <div class="project-desc">Data-driven analysis of Aotearoa NZ housing, cost of living, and public policy. No party lines — just numbers.</div>
-          <div class="project-tags"><span class="tag">Data</span><span class="tag">NZ</span><span class="tag">Policy</span></div>
-        </a>
+        <a href="https://github.com/ZephrBrennanOfficial/sales-consulting-toolkit" target="_blank" rel="noopener noreferrer" class="card"><div class="project-header"><div class="project-title">Sales Consulting Toolkit</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div><div class="project-desc">Practical sales frameworks — audit checklists, discovery templates, ROI calculator, objection handling, and sales psychology.</div><div class="project-tags"><span class="tag">Sales</span><span class="tag">Frameworks</span><span class="tag">HTML/CSS</span></div></a>
+        <a href="https://github.com/ZephrBrennanOfficial/business-case-studies" target="_blank" rel="noopener noreferrer" class="card"><div class="project-header"><div class="project-title">Business Case Studies</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div><div class="project-desc">Practice case studies — lead response analysis, NZ SaaS market sizing, sales diagnostics, and metrics that actually matter.</div><div class="project-tags"><span class="tag">Analysis</span><span class="tag">SaaS</span><span class="tag">NZ Market</span></div></a>
+        <a href="https://github.com/ZephrBrennanOfficial/sales-practice-lab" target="_blank" rel="noopener noreferrer" class="card"><div class="project-header"><div class="project-title">Sales Practice Lab</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div><div class="project-desc">Mock discovery calls, cold outreach experiments, book notes, and objection roleplay logs — with honest self-critiques.</div><div class="project-tags"><span class="tag">Practice</span><span class="tag">Roleplay</span><span class="tag">Self-critique</span></div></a>
+        <a href="https://github.com/ZephrBrennanOfficial/nz-policy-analysis" target="_blank" rel="noopener noreferrer" class="card"><div class="project-header"><div class="project-title">NZ Policy Analysis</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div><div class="project-desc">Data-driven analysis of Aotearoa NZ housing, cost of living, and public policy. No party lines — just numbers.</div><div class="project-tags"><span class="tag">Data</span><span class="tag">NZ</span><span class="tag">Policy</span></div></a>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- SERVICES — reworked across sales, leadership, AI, business -->
     <section class="animate delay-4">
       <h2 class="section-title">What Only I Can Give You</h2>
       <div class="services-intro">
-        You can hire a sales consultant who hasn't made a cold call in a decade. Or you can hire the person who <em>makes 40+ cold calls a day asking strangers for money</em>, studies the psychology behind every single one, documents it all publicly, spent four years performing in professional theatre, and <strong>IS the generation your sales team is failing to reach.</strong> These aren't services. They didn't exist until I started doing them — because nobody else is in my position.
+        You can hire consultants who learned your business from the outside and haven't been in the trenches since the Obama era. Or you can hire someone who's <em>in it right now</em> — making cold calls daily, building with AI, studying the methodology behind every decision, documenting everything publicly, and seeing your organisation from the angle you'll never see it from: the bottom. <strong>These aren't services. They're perspectives that didn't exist until I started offering them — because nobody else is in my position.</strong>
       </div>
       <div class="card-stack">
 
-        <!-- Service 1 -->
+        <!-- 1. SALES -->
         <div class="service-offering">
-          <div class="offering-tag">Built from live data</div>
+          <div class="offering-tag">Sales · Built from live data</div>
           <div class="offering-title">The Rejection Audit</div>
           <div class="offering-desc">
-            Your team has been trained on the 5-10 common objections from a textbook. I've collected <strong>200+ real rejection patterns</strong> from real cold calls — the polite no, the "just send me an email" no (which is a no), the "I'm not the right person" no, the angry no, the no that sounds like a maybe. I hear "no" more in a day than most sales teams hear in a month. When I audit your objection handling, I'm not working from theory. I'm working from a living database of actual human rejection that grows every time I pick up the phone. <strong>Nobody else has this because nobody else is doing what I'm doing.</strong>
+            Your team has been trained on the 5-10 common objections from a textbook. I've collected <strong>200+ real rejection patterns</strong> from actual cold calls — the polite no, the "just send me an email" no (which is a no), the "I'm not the right person" no, the angry no, the no that sounds like a maybe. I hear "no" more in a day than most sales teams hear in a month. When I audit your objection handling, I'm not working from theory. I'm working from a living database of human rejection that grows every time I pick up the phone.
           </div>
           <div class="offering-deliverables">
-            <strong>You get:</strong> Your team's top 5 objection responses tested against 20+ real-world rejection patterns I've personally encountered. Each one marked: "This would work on me" / "This would make me hang up faster" / "This is the worst thing you could possibly say." Plus rewritten responses for your 3 most common objections using language that actually lands in 2026 — not 2015.
+            <strong>You get:</strong> Your team's top 5 objection responses tested against 20+ real rejection patterns I've personally encountered. Each marked: "This would work on me" / "This makes me hang up faster" / "This is the worst thing you could say." Plus rewritten responses using language that actually lands in 2026 — not 2015.
           </div>
           <div class="offering-price">$450 NZD</div>
         </div>
 
-        <!-- Service 2 -->
+        <!-- 2. LEADERSHIP -->
         <div class="service-offering">
-          <div class="offering-tag">From the trenches, not the tower</div>
-          <div class="offering-title">The Frontline Brief</div>
+          <div class="offering-tag">Leadership · The view you'll never get internally</div>
+          <div class="offering-title">The View From Below</div>
           <div class="offering-desc">
-            Your CRM tells you what your team logged. Your dashboards tell you what closed. Your sales managers tell you what they think you want to hear. <strong>None of them tell you what's actually happening on the phones.</strong> I know — because I'm on the phones. I make 40+ cold calls a day to strangers, asking them for money. I know what works right now — not what worked in 2019, not what the latest sales book says, but what actually gets a stranger to stay on the line in 2026. You can't get this from an analyst because analysts don't make cold calls. You can't get this from your team because they filter everything. <strong>You can only get this from someone who's doing it right now.</strong>
+            Your 360 review comes from peers and managers. Your engagement survey comes from a tool that filters honesty through anonymity and a fear of being identified. Your culture deck says you're "transparent and empowering." But you'll <strong>never hear what your leadership actually looks like to the person at the bottom</strong> — the entry-level employee who sees the gap between what you say in the all-hands and what actually happens on the floor. I'm that person. I'll review your internal comms, your all-hands scripts, your culture initiatives, and your leadership messaging, and tell you exactly how it lands on someone with no power to push back. This is the feedback your team will never give you — because they're too afraid, too polite, or too filtered.
           </div>
           <div class="offering-deliverables">
-            <strong>You get:</strong> A monthly intelligence brief on the state of cold outreach from the trenches — what openings are dying, what objections are trending, what prospects are tired of hearing, and what's actually breaking through the noise right now. Includes specific language patterns, timing data, and 3 actionable recommendations your team can implement the same day.
+            <strong>You get:</strong> Review of your last 3 internal communications (all-hands script, team memo, culture initiative launch) with a "how this reads from the bottom" breakdown. Every element flagged: "This would make me go harder" / "I'd roll my eyes at this" / "This sounds like every other company." Plus rewritten versions of all 3 in language that entry-level people actually respect and respond to.
           </div>
-          <div class="offering-price">$650 NZD / month</div>
+          <div class="offering-price">$600 NZD</div>
         </div>
 
-        <!-- Service 3 -->
+        <!-- 3. AI -->
         <div class="service-offering">
-          <div class="offering-tag">I am your next buyer</div>
-          <div class="offering-title">The Generational Gap Audit</div>
+          <div class="offering-tag">AI · No hype, just what actually works</div>
+          <div class="offering-title">The AI Reality Check</div>
           <div class="offering-desc">
-            Your sales playbook was written by someone your age, for someone your age, to sell to someone your age. The problem: your buyers are getting younger. The person evaluating your software, sitting through your demo, recommending your product to their boss — they're 25-35, they've been marketed to since birth, they can smell corporate jargon from across the room, and they make decisions differently than the generation before them. <strong>I'm that person.</strong> Not someone who studied your next buyer. Someone who IS your next buyer. The gap between how you sell and how I buy is where your deals are dying — and I'll show you exactly where.
+            Every consultant is selling you "AI transformation." Slide decks, frameworks, maturity models. But when was the last time your AI consultant actually <em>built</em> something? I tinker with AI daily — not as a developer, but as someone who uses it like breathing and documents what works publicly. I've built tools, tested workflows, and found the gap between what AI vendors promise and what your team will actually use. <strong>I'll audit your AI plans, your tool stack, and your workflow ideas, and tell you: this will save your team hours / this is expensive hype / your team will never adopt this.</strong> No jargon, no "synergy," just "I've tried this and here's what actually happened."
           </div>
           <div class="offering-deliverables">
-            <strong>You get:</strong> Full audit of your sales motion — cold emails, LinkedIn outreach, discovery scripts, demo flow, website messaging, case studies — reviewed through the lens of your actual next-generation buyer. Every element flagged: "This would earn my trust" / "I'd tune out here" / "This makes you sound like every other vendor." Plus a prioritised 30-day fix plan with rewritten messaging for your top 5 touchpoints.
+            <strong>You get:</strong> Audit of your current or planned AI stack with a reality score for each tool: "Your team will use this daily" / "Nice to have" / "Waste of money." Plus a prioritised list of 3 AI implementations that will actually save your team 5+ hours per week — with step-by-step setup guides and the prompts I've tested myself.
+          </div>
+          <div class="offering-price">$700 NZD</div>
+        </div>
+
+        <!-- 4. BUSINESS -->
+        <div class="service-offering">
+          <div class="offering-tag">Business · Red-team your strategy</div>
+          <div class="offering-title">The Bullshit Filter</div>
+          <div class="offering-desc">
+            Your pitch deck sounds incredible in the boardroom. Everyone nods. But does it survive contact with someone who's <strong>numerate, skeptical, outside your industry, and has no incentive to be polite?</strong> I'll red-team your business strategy, value proposition, or investor pitch. Every claim stress-tested: "This checks out" / "I don't believe this number" / "This means nothing to someone outside your bubble." You get the scrutiny your team won't give you because they're invested in the answer being yes, and your investors won't give you because they've already decided. I have no stake in your outcome — I just have a nose for claims that don't survive contact with reality.
+          </div>
+          <div class="offering-deliverables">
+            <strong>You get:</strong> Line-by-line teardown of your strategy doc, pitch deck, or value proposition (up to 20 slides/pages). Every claim marked: "Verifiable and compelling" / "I don't believe this" / "This is jargon that means nothing." Plus the 3 weakest claims rewritten into language a skeptical outsider would actually buy.
           </div>
           <div class="offering-price">$800 NZD</div>
         </div>
 
-        <!-- Service 4 -->
+        <!-- 5. PERFORMANCE -->
         <div class="service-offering">
-          <div class="offering-tag">From backstage to boardroom</div>
+          <div class="offering-tag">Performance · From backstage to boardroom</div>
           <div class="offering-title">The Performance Review</div>
           <div class="offering-desc">
-            I spent four years as a professional makeup artist in theatre — backstage at Mary Poppins and CATS, working under pressure with a countdown to curtain. Theatre taught me something most sales trainers will never understand: <strong>what you say matters less than how you deliver it.</strong> Pacing. Timing. The pause before the key line. The energy shift when you move from rapport to pitch. The ability to read a room and adjust in real time. Your team's calls are performances — and right now, most of them are amateur theatre. I'll review recordings of your team's calls not just as a sales person, but as someone who understands stagecraft. Because sales IS performance — and the best performers don't just know their lines, they know how to make an audience lean in.
+            I spent four years as a professional makeup artist in theatre — backstage at Mary Poppins and CATS, working under pressure with a countdown to curtain. Theatre taught me something most sales and leadership trainers will never understand: <strong>what you say matters less than how you deliver it.</strong> Pacing. Timing. The pause before the key line. The energy shift when you move from rapport to pitch. The ability to read a room and adjust in real time. Your team's calls and presentations are performances — and right now, most of them are amateur theatre. I'll review recordings through the lens of stagecraft, because the best performers don't just know their lines — they know how to make an audience lean in.
           </div>
           <div class="offering-deliverables">
-            <strong>You get:</strong> Review of 3 recorded sales calls from your team. Each call scored on 8 performance dimensions: opening energy, pacing, pause usage, tonal shifts, rapport authenticity, pitch delivery, objection recovery, and close. Each rep gets a personalised one-pager: what's working, what's killing the performance, and the one specific delivery change that would transform their next call.
+            <strong>You get:</strong> Review of 3 recorded calls or presentations from your team. Each scored on 8 performance dimensions: opening energy, pacing, pause usage, tonal shifts, rapport authenticity, pitch delivery, objection recovery, and close. Each person gets a one-pager: what's working, what's killing the performance, and the one delivery change that would transform their next call.
           </div>
           <div class="offering-price">$550 NZD</div>
         </div>
@@ -290,61 +201,33 @@
       </p>
     </section>
 
-    <!-- Writing -->
     <section class="animate delay-5">
       <h2 class="section-title">Latest Writing</h2>
       <div class="card-stack">
-        <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="writing-card" style="text-decoration: none; color: inherit; display: block;">
-          <div class="writing-title">What I Learned About Sales From Being the One Nobody Wants to Talk To</div>
-          <div class="writing-desc">Part 1 of a 5-part series on what the bottom of the ladder teaches you about sales. Objections as maps, not walls.</div>
-          <div class="writing-link">Read on Substack →</div>
-        </a>
+        <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="writing-card" style="text-decoration: none; color: inherit; display: block;"><div class="writing-title">What I Learned About Sales From Being the One Nobody Wants to Talk To</div><div class="writing-desc">Part 1 of a 5-part series on what the bottom of the ladder teaches you about sales. Objections as maps, not walls.</div><div class="writing-link">Read on Substack →</div></a>
       </div>
     </section>
 
-    <!-- About -->
     <section class="animate delay-6">
       <h2 class="section-title">About Me</h2>
       <div class="about-card">
-        <p class="about-text">
-          I'm an early-career professional in Auckland building a career in sales, AI, and telecoms from the ground up. I believe exceptional sales isn't about high-pressure selling — it's about <span class="highlight">active listening</span>, deep curiosity, and helping people solve real problems.
-        </p>
-        <p class="about-text">
-          Currently working as a Telefundraiser at Fundamental Worldwide. Background in customer service — which turned out to be the best sales training I never asked for. Also a former freelance makeup artist for musical theatre (Mary Poppins, CATS).
-        </p>
-        <p class="about-text">
-          Instead of just studying in private, I build my skillset in the open. Every repo here represents living practice — frameworks, case studies, practice reps, and analysis shared publicly.
-        </p>
+        <p class="about-text">I'm an early-career professional in Auckland building a career in sales, AI, and telecoms from the ground up. I believe exceptional sales isn't about high-pressure selling — it's about <span class="highlight">active listening</span>, deep curiosity, and helping people solve real problems.</p>
+        <p class="about-text">Currently working as a Telefundraiser at Fundamental Worldwide. Background in customer service — which turned out to be the best sales training I never asked for. Also a former freelance makeup artist for musical theatre (Mary Poppins, CATS).</p>
+        <p class="about-text">Instead of just studying in private, I build my skillset in the open. Every repo here represents living practice — frameworks, case studies, practice reps, and analysis shared publicly.</p>
       </div>
     </section>
 
-    <!-- Connect -->
     <section class="animate delay-7">
       <h2 class="section-title">Connect &amp; Collaborate</h2>
       <div class="connect-grid">
-        <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.612V24h21.08V10.612H1.46zM6.602 18.93H3.294v-2.01h3.308v2.01zm0-3.676H3.294v-2.01h3.308v2.01zm5.825 3.676H9.119v-2.01h3.308v2.01zm0-3.676H9.119v-2.01h3.308v2.01zm5.825 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zm5.826 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zM1.46 4.273V1.437h21.08v2.836H1.46z"/></svg>
-          <span>Substack</span>
-        </a>
-        <a href="https://www.linkedin.com/in/zephrbrennan" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a href="https://twitter.com/ZephrBrennan" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          <span>Twitter / X</span>
-        </a>
+        <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="connect-btn"><svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.612V24h21.08V10.612H1.46zM6.602 18.93H3.294v-2.01h3.308v2.01zm0-3.676H3.294v-2.01h3.308v2.01zm5.825 3.676H9.119v-2.01h3.308v2.01zm0-3.676H9.119v-2.01h3.308v2.01zm5.825 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zm5.826 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zM1.46 4.273V1.437h21.08v2.836H1.46z"/></svg><span>Substack</span></a>
+        <a href="https://www.linkedin.com/in/zephrbrennan" target="_blank" rel="noopener noreferrer" class="connect-btn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg><span>LinkedIn</span></a>
+        <a href="https://github.com/ZephrBrennanOfficial" target="_blank" rel="noopener noreferrer" class="connect-btn"><svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg><span>GitHub</span></a>
+        <a href="https://twitter.com/ZephrBrennan" target="_blank" rel="noopener noreferrer" class="connect-btn"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>Twitter / X</span></a>
       </div>
     </section>
 
-    <footer class="animate delay-8">
-      <p>&copy; 2026 Zephr Brennan &middot; <span>Building in public</span></p>
-    </footer>
-
+    <footer class="animate delay-8"><p>&copy; 2026 Zephr Brennan &middot; <span>Building in public</span></p></footer>
   </main>
 </body>
 </html>
