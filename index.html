@@ -4,421 +4,501 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zephr Brennan | Writer, Builder, Lifelong Learner — Auckland, Aotearoa NZ</title>
-  <meta name="description" content="Zephr Brennan — early-career professional in Auckland, NZ. Building skills in sales, business strategy, and AI. Writing in public. Learning out loud. Getting to the top, one rep at a time.">
+  <meta name="description" content="Zephr Brennan — early-career professional in Auckland, NZ. Building skills in sales, business strategy, and AI. Writing in public. Learning out loud.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Zephr Brennan | Writer, Builder, Lifelong Learner">
   <meta property="og:description" content="Building a career from scratch in Auckland, Aotearoa NZ. Sales, strategy, AI, and writing — documented publicly.">
   <meta property="og:url" content="https://zephrbrennanofficial.github.io/portfolio/">
+  <meta property="og:image" content="https://media.base44.com/images/public/6a6e5d661c68f94a6ec47f21/e94b1c0d2_generated_image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --beige: #F5F1E8; --beige-light: #FAF7F0; --beige-mid: #EDE7D8; --beige-border: #DDD5C2;
-      --black: #1a1a1a; --black-soft: #2D2A26; --white: #ffffff;
-      --gold: #C5A558; --gold-dark: #A88A45; --gold-light: #D4B970; --gold-pale: #EDE3C8;
-      --gold-shimmer: linear-gradient(135deg, #C5A558 0%, #EDE3C8 50%, #C5A558 100%);
+      --white: #ffffff;
+      --off-white: #FAFAF8;
+      --cream: #F5F1E8;
+      --cream-mid: #EDE7D8;
+      --cream-border: #DDD5C2;
+      --gold: #C5A558;
+      --gold-dark: #A88A45;
+      --gold-light: #D4B970;
+      --gold-pale: #F3EDD8;
+      --black: #1A1A1A;
+      --black-soft: #2D2A26;
       --text-muted: #6B6358;
-      --shadow-sm: 0 2px 8px rgba(26,26,26,0.06); --shadow-md: 0 8px 24px rgba(26,26,26,0.08);
-      --shadow-lg: 0 16px 48px rgba(26,26,26,0.12); --shadow-gold: 0 8px 32px rgba(197,165,88,0.15);
-      --radius: 16px; --radius-sm: 10px;
+      --text-mid: #4A4540;
+      --shadow-sm: 0 2px 12px rgba(26,26,26,0.06);
+      --shadow-md: 0 8px 32px rgba(26,26,26,0.09);
+      --shadow-lg: 0 20px 60px rgba(26,26,26,0.12);
+      --shadow-gold: 0 8px 32px rgba(197,165,88,0.18);
+      --radius: 20px;
+      --radius-sm: 12px;
+      --max-w: 1180px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background-color: var(--beige); }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--black); line-height: 1.7; background-color: var(--beige); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
-    a { color: var(--gold-dark); text-decoration: none; } a:hover { color: var(--black); }
-    .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--gold-shimmer); z-index: 9999; transition: width 0.1s ease; box-shadow: 0 0 8px rgba(197,165,88,0.4); }
-    .scroll-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border-radius: 50%; background: var(--black); color: var(--gold); border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; z-index: 9998; box-shadow: var(--shadow-md); }
+    html { scroll-behavior: smooth; background: var(--white); }
+    body { font-family: 'Inter', -apple-system, sans-serif; color: var(--black); line-height: 1.7; background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    h1,h2,h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+    a { color: var(--gold-dark); text-decoration: none; }
+
+    /* ── Scroll progress ── */
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%); z-index: 9999; transition: width 0.1s ease; }
+
+    /* ── Scroll to top ── */
+    .scroll-top { position: fixed; bottom: 2rem; right: 2rem; width: 48px; height: 48px; border-radius: 50%; background: var(--white); color: var(--gold-dark); border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transform: translateY(16px); transition: all 0.3s ease; z-index: 9998; box-shadow: var(--shadow-md); }
     .scroll-top.visible { opacity: 1; transform: translateY(0); }
-    .scroll-top:hover { background: var(--gold); color: var(--black); transform: translateY(-3px); box-shadow: var(--shadow-gold); }
-    .scroll-top svg { width: 20px; height: 20px; }
-    .pattern-divider { width: 100%; height: 24px; background-color: var(--black); background-image: repeating-linear-gradient(45deg, transparent 0, transparent 8px, var(--gold) 8px, var(--gold) 10px, transparent 10px, transparent 18px, var(--gold-light) 18px, var(--gold-light) 20px); position: relative; }
-    .pattern-divider::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 32px; height: 32px; background: var(--black); border: 2px solid var(--gold); border-radius: 50%; }
-    .pattern-divider::before { content: '✦'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--gold); font-size: 14px; z-index: 1; }
-    .container { max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
-    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(197,165,88,0.2); } 50% { box-shadow: 0 0 40px rgba(197,165,88,0.35); } }
-    .animate { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
-    .delay-1 { animation-delay: 0.05s; } .delay-2 { animation-delay: 0.12s; } .delay-3 { animation-delay: 0.2s; }
-    .delay-4 { animation-delay: 0.28s; } .delay-5 { animation-delay: 0.36s; } .delay-6 { animation-delay: 0.44s; }
-    .delay-7 { animation-delay: 0.52s; } .delay-8 { animation-delay: 0.6s; } .delay-9 { animation-delay: 0.68s; }
-    .delay-10 { animation-delay: 0.76s; }
-    .hero { background: var(--black); color: var(--white); padding: 5rem 0 4.5rem; position: relative; overflow: hidden; }
-    .hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://media.base44.com/images/public/6a6e5d661c68f94a6ec47f21/6bab502c1_generated_image.png'); background-size: cover; background-position: center; opacity: 0.35; }
-    .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, transparent, var(--black)); pointer-events: none; }
-    .hero .container { position: relative; z-index: 2; }
-    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 9999px; background: rgba(197,165,88,0.08); border: 1px solid rgba(197,165,88,0.25); color: var(--gold-light); font-size: 0.825rem; font-weight: 500; margin-bottom: 1.75rem; letter-spacing: 0.01em; backdrop-filter: blur(4px); }
-    .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold); position: relative; }
-    .pulse-dot::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; background-color: var(--gold); animation: pulseRing 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
-    @keyframes pulseRing { 0% { transform: scale(0.9); opacity: 0.8; } 70% { transform: scale(2.2); opacity: 0; } 100% { transform: scale(2.2); opacity: 0; } }
-    .hero-name { font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 0.7rem; color: var(--white); }
-    .hero-tagline { font-size: 1.05rem; font-weight: 600; color: var(--gold); margin-bottom: 1.35rem; letter-spacing: -0.01em; min-height: 1.5em; }
-    .hero-tagline .cursor { display: inline-block; width: 2px; height: 1.1em; background: var(--gold); margin-left: 2px; animation: blink 0.8s infinite; vertical-align: text-bottom; }
-    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-    .hero-bio { color: rgba(255,255,255,0.72); font-size: 1.02rem; line-height: 1.75; margin-bottom: 2rem; max-width: 520px; }
-    .hero-bio strong { color: var(--white); }
-    .hero-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.95rem 2.1rem; background: var(--gold); color: var(--black) !important; border-radius: 9999px; font-size: 0.92rem; font-weight: 700; font-family: 'Inter', sans-serif; transition: all 0.3s ease; position: relative; overflow: hidden; }
-    .hero-cta::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s ease; }
-    .hero-cta:hover::before { left: 100%; }
-    .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(197,165,88,0.35); }
-    .hero-corner { position: absolute; width: 60px; height: 60px; border: 1px solid rgba(197,165,88,0.2); pointer-events: none; }
-    .hero-corner.tl { top: 24px; left: 24px; border-right: none; border-bottom: none; }
-    .hero-corner.tr { top: 24px; right: 24px; border-left: none; border-bottom: none; }
-    .hero-corner.bl { bottom: 24px; left: 24px; border-right: none; border-top: none; }
-    .hero-corner.br { bottom: 24px; right: 24px; border-left: none; border-top: none; }
-    section { padding: 3.5rem 0; position: relative; }
-    .section-title { font-family: 'Fraunces', serif; font-size: 1.45rem; font-weight: 700; color: var(--black); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; letter-spacing: -0.02em; }
-    .section-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin-left: 0.5rem; }
-    .section-label { font-size: 0.78rem; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem; }
-    .section-label svg { width: 14px; height: 14px; }
-    .icon-svg { width: 28px; height: 28px; stroke: var(--gold-dark); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 0.6rem; transition: all 0.3s ease; }
-    .value-card:hover .icon-svg, .learning-item:hover .icon-svg { stroke: var(--gold); transform: scale(1.1); }
-    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    @media (max-width: 540px) { .values-grid { grid-template-columns: 1fr; } }
-    .value-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.6rem 1.5rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
-    .value-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold-shimmer); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
-    .value-card:hover { box-shadow: var(--shadow-md); border-color: var(--gold-light); transform: translateY(-4px); }
-    .value-card:hover::before { transform: scaleX(1); }
-    .value-card h3 { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 0.35rem; }
-    .value-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
-    .learning-list { display: flex; flex-direction: column; gap: 0.75rem; }
-    .learning-item { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius-sm); padding: 1.2rem 1.4rem; display: flex; gap: 0.9rem; align-items: flex-start; transition: all 0.3s ease; position: relative; overflow: hidden; }
-    .learning-item::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold); transform: scaleY(0); transform-origin: top; transition: transform 0.3s ease; }
-    .learning-item:hover { box-shadow: var(--shadow-sm); border-color: var(--gold-light); transform: translateX(4px); }
-    .learning-item:hover::after { transform: scaleY(1); }
-    .learning-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; box-shadow: 0 0 0 3px rgba(197,165,88,0.15); }
-    .learning-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 0.25rem; }
+    .scroll-top:hover { background: var(--gold); color: var(--white); border-color: var(--gold); transform: translateY(-3px) scale(1.05); box-shadow: var(--shadow-gold); }
+    .scroll-top svg { width: 18px; height: 18px; }
+
+    /* ── Nav ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--cream-border); transition: box-shadow 0.3s ease; }
+    nav.scrolled { box-shadow: var(--shadow-sm); }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2.5rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 700; color: var(--black); letter-spacing: -0.02em; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color 0.2s ease; }
+    .nav-links a:hover { color: var(--gold-dark); }
+    .nav-cta { background: var(--gold) !important; color: var(--black) !important; padding: 0.6rem 1.4rem; border-radius: 9999px; font-weight: 600 !important; font-size: 0.85rem !important; transition: all 0.25s ease !important; }
+    .nav-cta:hover { background: var(--gold-dark) !important; color: var(--white) !important; transform: translateY(-1px); box-shadow: var(--shadow-gold); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s ease; }
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 1.5rem 2rem; gap: 1.25rem; border-bottom: 1px solid var(--cream-border); box-shadow: var(--shadow-md); }
+      .nav-links.open { display: flex; }
+      .nav-cta { width: fit-content; }
+    }
+
+    /* ── Hero ── */
+    .hero { padding-top: 68px; min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: var(--max-w); margin: 0 auto; padding-left: 2.5rem; padding-right: 2.5rem; gap: 4rem; }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; padding-top: 100px; min-height: auto; padding-bottom: 4rem; gap: 2.5rem; } .hero-img-col { order: -1; } }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 9999px; background: var(--gold-pale); border: 1px solid rgba(197,165,88,0.3); color: var(--gold-dark); font-size: 0.8rem; font-weight: 600; margin-bottom: 1.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); position: relative; flex-shrink: 0; }
+    .pulse-dot::after { content: ''; position: absolute; top: -3px; left: -3px; right: -3px; bottom: -3px; border-radius: 50%; border: 1.5px solid var(--gold); animation: pulseRing 1.8s ease-out infinite; }
+    @keyframes pulseRing { 0% { opacity: 0.8; transform: scale(0.9); } 80% { opacity: 0; transform: scale(2); } 100% { opacity: 0; transform: scale(2); } }
+    .hero-name { font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 800; color: var(--black); margin-bottom: 1rem; }
+    .hero-name .gold { color: var(--gold-dark); }
+    .hero-sub { font-size: 1.1rem; font-weight: 400; color: var(--text-muted); margin-bottom: 1rem; }
+    .hero-tagline { font-size: 1.15rem; font-weight: 600; color: var(--text-mid); margin-bottom: 2rem; line-height: 1.6; }
+    .hero-tagline em { color: var(--gold-dark); font-style: normal; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; background: var(--gold); color: var(--black); border-radius: 9999px; font-size: 0.92rem; font-weight: 700; border: none; cursor: pointer; transition: all 0.25s ease; box-shadow: 0 4px 16px rgba(197,165,88,0.25); }
+    .btn-primary:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(197,165,88,0.35); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; background: var(--white); color: var(--black); border-radius: 9999px; font-size: 0.92rem; font-weight: 600; border: 1.5px solid var(--cream-border); cursor: pointer; transition: all 0.25s ease; }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold-dark); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .hero-img-col { position: relative; }
+    .hero-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+    .hero-img-badge { position: absolute; bottom: -16px; left: -16px; background: var(--white); border: 1px solid var(--cream-border); border-radius: var(--radius-sm); padding: 1rem 1.25rem; box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 0.75rem; }
+    .hero-img-badge .badge-icon { width: 36px; height: 36px; background: var(--gold-pale); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .hero-img-badge .badge-icon svg { width: 18px; height: 18px; stroke: var(--gold-dark); fill: none; stroke-width: 2; }
+    .hero-img-badge p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.3; }
+    .hero-img-badge strong { font-size: 0.88rem; color: var(--black); display: block; font-weight: 700; }
+
+    /* ── Shared section layout ── */
+    .section { padding: 5rem 2.5rem; max-width: var(--max-w); margin: 0 auto; }
+    .section-full { padding: 5rem 2.5rem; background: var(--off-white); }
+    .section-full .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-dark { padding: 5rem 2.5rem; background: var(--black); }
+    .section-dark .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 700; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 0.6rem; }
+    .section-heading { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--black); margin-bottom: 0.75rem; }
+    .section-heading .gold { color: var(--gold-dark); }
+    .section-sub { font-size: 1rem; color: var(--text-muted); max-width: 600px; line-height: 1.75; margin-bottom: 2.5rem; }
+
+    /* ── Divider ── */
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--cream-border), transparent); margin: 0; }
+
+    /* ── Values ── */
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+    .value-card { background: var(--white); border: 1px solid var(--cream-border); border-radius: var(--radius); padding: 2rem 1.75rem; transition: all 0.3s ease; cursor: default; }
+    .value-card:hover { border-color: var(--gold); box-shadow: var(--shadow-gold); transform: translateY(-4px); }
+    .value-icon { width: 44px; height: 44px; background: var(--gold-pale); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .value-icon svg { width: 20px; height: 20px; stroke: var(--gold-dark); fill: none; stroke-width: 2; }
+    .value-card h3 { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 0.5rem; }
+    .value-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── Split layout ── */
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    @media (max-width: 800px) { .split { grid-template-columns: 1fr; gap: 2rem; } }
+    .split-img { width: 100%; border-radius: var(--radius); object-fit: cover; aspect-ratio: 4/3; box-shadow: var(--shadow-lg); }
+
+    /* ── Learning items ── */
+    .learning-list { display: flex; flex-direction: column; gap: 1rem; }
+    .learning-item { background: var(--white); border: 1px solid var(--cream-border); border-radius: var(--radius-sm); padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; transition: all 0.25s ease; }
+    .learning-item:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); transform: translateX(4px); }
+    .learning-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; }
+    .learning-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 0.3rem; }
     .learning-item p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; }
-    .card-stack { display: flex; flex-direction: column; gap: 0.875rem; }
-    .card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.4rem 1.5rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
-    .card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(197,165,88,0.04) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
-    a.card { text-decoration: none; color: inherit; display: block; }
-    a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--gold); }
-    a.card:hover::before { opacity: 1; }
-    .project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.4rem; }
-    .project-title { font-size: 1.05rem; font-weight: 700; color: var(--black); font-family: 'Fraunces', serif; }
-    .arrow-icon { width: 18px; height: 18px; fill: none; stroke: var(--text-muted); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: all 0.3s ease; }
-    a.card:hover .arrow-icon { stroke: var(--gold-dark); transform: translate(2px, -2px); }
-    .project-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.75rem; }
-    .project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-    .tag { font-size: 0.72rem; padding: 3px 10px; border-radius: 6px; background: var(--gold-pale); color: var(--gold-dark); border: 1px solid var(--gold-light); font-weight: 500; transition: all 0.2s ease; }
-    a.card:hover .tag { background: var(--gold); color: var(--white); border-color: var(--gold); }
-    .offer-card { background: var(--white); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.75rem 1.75rem; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
-    .offer-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold-shimmer); background-size: 200% auto; animation: shimmer 3s linear infinite; }
-    .offer-card:hover { box-shadow: var(--shadow-gold); border-color: var(--gold-dark); transform: translateY(-4px); }
-    .offer-card h3 { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 700; color: var(--black); margin-bottom: 0.5rem; }
-    .offer-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.85rem; }
-    .offer-link { font-size: 0.88rem; font-weight: 600; color: var(--gold-dark); display: inline-flex; align-items: center; gap: 0.4rem; transition: gap 0.2s ease; }
-    .offer-card:hover .offer-link { gap: 0.7rem; }
-    .writing-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 1.4rem 1.5rem; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
-    .writing-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold); transform: scaleY(0); transition: transform 0.3s ease; }
-    .writing-card:hover { box-shadow: var(--shadow-md); border-color: var(--gold); transform: translateY(-4px); }
-    .writing-card:hover::before { transform: scaleY(1); }
-    .writing-title { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 0.4rem; line-height: 1.4; font-family: 'Fraunces', serif; }
-    .writing-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.6rem; }
-    .writing-link { font-size: 0.85rem; font-weight: 600; color: var(--gold-dark); }
-    .about-card { background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius); padding: 2.25rem 2rem; position: relative; }
-    .about-card::before { content: '"'; position: absolute; top: -10px; left: 1.5rem; font-family: 'Fraunces', serif; font-size: 4rem; color: var(--gold); opacity: 0.25; line-height: 1; }
-    .about-card p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.85; }
-    .about-card p + p { margin-top: 1rem; }
-    .about-card strong { color: var(--black); }
-    .about-card .highlight { color: var(--gold-dark); font-weight: 600; }
-    .aspiration-section { position: relative; overflow: hidden; }
-    .aspiration-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://media.base44.com/images/public/6a6e5d661c68f94a6ec47f21/12de7a03e_generated_image.png'); background-size: cover; background-position: center; opacity: 0.12; pointer-events: none; }
-    .aspiration-card { background: linear-gradient(135deg, var(--beige-mid), var(--gold-pale)); border: 1px solid var(--gold-light); border-radius: var(--radius); padding: 2.5rem 2.25rem; position: relative; z-index: 1; box-shadow: var(--shadow-sm); }
-    .aspiration-card::after { content: ''; position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border: 1px solid var(--gold); border-radius: 50%; opacity: 0.2; }
-    .aspiration-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.85; }
-    .aspiration-card p + p { margin-top: 1rem; }
-    .aspiration-card strong { color: var(--black); }
-    .aspiration-card .quote { font-family: 'Fraunces', serif; font-size: 1.25rem; color: var(--gold-dark); line-height: 1.5; margin-bottom: 1.5rem; font-style: italic; font-weight: 600; position: relative; padding-left: 1.5rem; }
-    .aspiration-card .quote::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 3px; background: var(--gold); border-radius: 2px; }
-    .connect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    @media (max-width: 420px) { .connect-grid { grid-template-columns: 1fr; } }
-    .connect-btn { display: flex; align-items: center; gap: 0.65rem; padding: 1.1rem 1.35rem; background: var(--white); border: 1px solid var(--beige-border); border-radius: var(--radius-sm); color: var(--black); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden; }
-    .connect-btn::before { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
-    .connect-btn:hover { box-shadow: var(--shadow-sm); border-color: var(--gold); transform: translateY(-3px); }
-    .connect-btn:hover::before { transform: scaleX(1); }
-    .connect-btn svg { width: 20px; height: 20px; fill: var(--gold-dark); transition: all 0.3s ease; }
-    .connect-btn:hover svg { fill: var(--black); transform: scale(1.1); }
-    footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3.5rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
-    .footer-pattern { height: 20px; margin-bottom: 2.5rem; background-image: repeating-linear-gradient(90deg, transparent 0, transparent 20px, var(--gold) 20px, var(--gold) 22px, transparent 22px, transparent 40px, var(--gold-light) 40px, var(--gold-light) 42px); opacity: 0.3; }
-    .footer-ornament { width: 40px; height: 40px; margin: 0 auto 1.5rem; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: glow-pulse 3s ease-in-out infinite; }
-    .footer-ornament svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
-    .footer-logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-    .footer-text { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
-    .footer-text span { color: var(--gold); }
-    .section-num { position: absolute; top: 1.5rem; right: 1.5rem; font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 800; color: var(--gold); opacity: 0.06; pointer-events: none; }
+
+    /* ── Offer card ── */
+    .offer-card { background: var(--white); border: 1.5px solid var(--gold); border-radius: var(--radius); padding: 2.5rem; position: relative; overflow: hidden; }
+    .offer-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold-dark), var(--gold-light)); }
+    .offer-card h3 { font-size: 1.4rem; color: var(--black); margin-bottom: 0.75rem; }
+    .offer-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.75rem; }
+
+    /* ── Writing card ── */
+    .writing-card { background: var(--white); border: 1px solid var(--cream-border); border-radius: var(--radius); padding: 2rem; transition: all 0.3s ease; }
+    .writing-card:hover { border-color: var(--gold); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .writing-series { font-size: 0.75rem; font-weight: 700; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .writing-title { font-size: 1.1rem; font-weight: 700; color: var(--black); margin-bottom: 0.6rem; }
+    .writing-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+    .writing-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--gold-dark); transition: gap 0.2s ease; }
+    .writing-card:hover .writing-link { gap: 0.65rem; }
+
+    /* ── Projects grid ── */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+    .project-card { background: var(--white); border: 1px solid var(--cream-border); border-radius: var(--radius-sm); padding: 1.75rem; transition: all 0.25s ease; display: flex; flex-direction: column; }
+    .project-card:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); transform: translateY(-3px); }
+    .project-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 0.4rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+    .project-card h3 svg { width: 14px; height: 14px; stroke: var(--text-muted); flex-shrink: 0; margin-top: 3px; transition: stroke 0.2s ease; }
+    .project-card:hover h3 svg { stroke: var(--gold-dark); }
+    .project-card p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.55; flex: 1; margin-bottom: 1rem; }
+    .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .tag { font-size: 0.72rem; font-weight: 600; color: var(--gold-dark); background: var(--gold-pale); border-radius: 9999px; padding: 3px 10px; }
+
+    /* ── About ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
+    @media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .about-text p { font-size: 0.97rem; color: var(--text-muted); line-height: 1.85; }
+    .about-text p + p { margin-top: 1rem; }
+    .about-text strong { color: var(--black); }
+    .about-quote { background: var(--gold-pale); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.5rem 1.75rem; margin-top: 1.75rem; }
+    .about-quote p { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--black-soft); font-style: italic; line-height: 1.65; }
+
+    /* ── Connect ── */
+    .connect-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+    .connect-btn { display: flex; align-items: center; gap: 0.75rem; padding: 1.1rem 1.4rem; background: var(--white); border: 1px solid var(--cream-border); border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 600; color: var(--black); transition: all 0.25s ease; cursor: pointer; }
+    .connect-btn svg { width: 20px; height: 20px; fill: var(--text-muted); flex-shrink: 0; transition: fill 0.25s ease; }
+    .connect-btn:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); color: var(--gold-dark); transform: translateY(-2px); }
+    .connect-btn:hover svg { fill: var(--gold-dark); }
+    .connect-btn:hover { color: var(--gold-dark); }
+
+    /* ── Dark section text ── */
+    .section-dark .section-label { color: var(--gold-light); }
+    .section-dark .section-heading { color: var(--white); }
+    .section-dark .section-heading .gold { color: var(--gold-light); }
+    .section-dark .section-sub { color: rgba(255,255,255,0.6); }
+
+    /* ── Footer ── */
+    footer { background: var(--black); color: rgba(255,255,255,0.5); text-align: center; padding: 3rem 2.5rem; font-size: 0.85rem; }
+    .footer-name { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    footer p { margin-top: 0.5rem; }
+    footer span { color: var(--gold); }
+
+    /* ── Animations ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .animate { opacity: 0; }
+    .animate.in-view { animation: fadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.12s; } .d3 { animation-delay: 0.2s; }
+    .d4 { animation-delay: 0.28s; } .d5 { animation-delay: 0.36s; } .d6 { animation-delay: 0.44s; }
   </style>
 </head>
 <body>
+
   <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Nav -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <div class="nav-logo">Zephr Brennan</div>
+      <div class="nav-hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#values">Values</a>
+        <a href="#learning">Learning</a>
+        <a href="#writing">Writing</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" class="nav-cta">Work with me →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero" style="padding-top: calc(68px + 5rem);">
+    <div class="hero-text-col">
+      <div class="hero-badge animate d1">
+        <span class="pulse-dot"></span>
+        Building in public · Auckland, NZ
+      </div>
+      <h1 class="hero-name animate d2">Zephr<br><span class="gold">Brennan.</span></h1>
+      <p class="hero-sub animate d3">Writer · Builder · Lifelong Learner</p>
+      <p class="hero-tagline animate d4">
+        Building a career from the ground up — in <em>sales, strategy, and AI</em>.<br>
+        Documenting everything. Starting at the bottom on purpose.
+      </p>
+      <div class="hero-actions animate d5">
+        <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" class="btn-primary">
+          Work with me →
+        </a>
+        <a href="https://zephrbrennan.substack.com" target="_blank" class="btn-secondary">
+          Read my writing
+        </a>
+      </div>
+    </div>
+    <div class="hero-img-col animate d3">
+      <img src="https://media.base44.com/images/public/6a6e5d661c68f94a6ec47f21/e94b1c0d2_generated_image.png" alt="Workspace" class="hero-img">
+      <div class="hero-img-badge">
+        <div class="badge-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div>
+          <strong>Learning out loud</strong>
+          <p>Every rep. Every day. In public.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <header class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-corner tl"></div><div class="hero-corner tr"></div>
-    <div class="hero-corner bl"></div><div class="hero-corner br"></div>
-    <div class="container">
-      <div class="badge animate delay-1"><span class="pulse-dot"></span>Building in Public</div>
-      <h1 class="hero-name animate delay-2">Zephr Brennan</h1>
-      <p class="hero-tagline animate delay-3" id="tagline"><span id="taglineText"></span><span class="cursor"></span></p>
-      <p class="hero-bio animate delay-4">I'm an early-career professional building a career from the ground up — in <strong>sales, business strategy, and AI</strong>. I document everything I learn, create things in public, and believe that starting at the bottom is an advantage, not a limitation. The view from here teaches you things the top never will.</p>
-      <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" rel="noopener noreferrer" class="hero-cta animate delay-5">Quill — LinkedIn Ghostwriting &rarr;</a>
-    </div>
-  </header>
+  <div class="divider"></div>
 
-  <div class="pattern-divider"></div>
-
-  <section class="animate delay-3">
-    <div class="section-num">01</div>
-    <div class="container">
-      <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Values</p>
-      <h2 class="section-title">What I Stand For</h2>
-      <div class="values-grid">
-        <div class="value-card">
-          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22c0-6 0-12-8-16"/><path d="M12 22c0-6 0-12 8-16"/><path d="M12 14c-2-2-5-2-6 0"/><path d="M12 14c2-2 5-2 6 0"/><path d="M12 22V8"/></svg>
-          <h3>Growth over optics</h3>
-          <p>I'd rather be honest about where I'm at and growing visibly than pretend I'm further along than I am. Real progress beats manufactured authority.</p>
-        </div>
-        <div class="value-card">
-          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          <h3>Learning in public</h3>
-          <p>Everything I build, study, and write is documented openly. Not because I have all the answers — because the process of sharing makes the learning stick.</p>
-        </div>
-        <div class="value-card">
-          <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 7v8M7 11h8"/></svg>
-          <h3>The bottom-up view</h3>
-          <p>The people closest to the work see things the people at the top can't. I take that perspective seriously — it's where the real insight lives.</p>
-        </div>
-        <div class="value-card">
-          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/><path d="m15 5 4 4"/></svg>
-          <h3>Honest writing</h3>
-          <p>Short, direct, no jargon. If it doesn't sound like something a real person would say out loud, it doesn't get published.</p>
-        </div>
+  <!-- Values -->
+  <div class="section" id="values">
+    <p class="section-label animate d1">What I Stand For</p>
+    <h2 class="section-heading animate d2">Values</h2>
+    <p class="section-sub animate d3">The things that don't change regardless of what level I'm at.</p>
+    <div class="values-grid">
+      <div class="value-card animate d1">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Growth over optics</h3>
+        <p>I'd rather be honest about where I'm at and growing visibly than pretend I'm further along. Real progress beats manufactured authority.</p>
+      </div>
+      <div class="value-card animate d2">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3>Learning in public</h3>
+        <p>Everything I build, study, and write is documented openly. Not because I have all the answers — because sharing makes the learning stick.</p>
+      </div>
+      <div class="value-card animate d3">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <h3>The bottom-up view</h3>
+        <p>The people closest to the work see things the people at the top can't. I take that perspective seriously — it's where the real insight lives.</p>
+      </div>
+      <div class="value-card animate d4">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Honest writing</h3>
+        <p>Short, direct, no jargon. If it doesn't sound like something a real person would say out loud, it doesn't get published.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <div class="pattern-divider"></div>
+  <div class="divider"></div>
 
-  <section class="animate delay-4">
-    <div class="section-num">02</div>
-    <div class="container">
-      <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Current Work</p>
-      <h2 class="section-title">What I'm Learning &amp; Creating</h2>
-      <div class="learning-list">
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <div>
-            <h3>Sales &amp; Business Strategy</h3>
-            <p>Building practical frameworks — discovery templates, objection handling scripts, cold outreach experiments, and market analysis. Studying what makes sales actually work, not what the textbooks say should work.</p>
+  <!-- Learning & Creating -->
+  <div class="section-full" id="learning">
+    <div class="section-inner">
+      <div class="split">
+        <div>
+          <p class="section-label animate d1">What I'm Working On</p>
+          <h2 class="section-heading animate d2">Learning &amp; <span class="gold">Creating</span></h2>
+          <p class="section-sub animate d3">Nothing is off the record. Here's what I'm actually studying and building right now.</p>
+          <div class="learning-list">
+            <div class="learning-item animate d2">
+              <span class="learning-dot"></span>
+              <div>
+                <h3>Sales &amp; Business Strategy</h3>
+                <p>Building practical frameworks — discovery templates, objection handling, cold outreach experiments, and market analysis. Studying what makes sales actually work.</p>
+              </div>
+            </div>
+            <div class="learning-item animate d3">
+              <span class="learning-dot"></span>
+              <div>
+                <h3>Writing — Substack Series</h3>
+                <p>A 5-part series on what the bottom of the ladder teaches you about sales, trust, attention, and leadership. Written from the perspective of someone who's actually there.</p>
+              </div>
+            </div>
+            <div class="learning-item animate d4">
+              <span class="learning-dot"></span>
+              <div>
+                <h3>AI &amp; Tools</h3>
+                <p>Tinkering with AI to build useful things — ghostwriting workflows, data analysis tools, automation setups. Treating it as a practical skill, not a buzzword.</p>
+              </div>
+            </div>
+            <div class="learning-item animate d5">
+              <span class="learning-dot"></span>
+              <div>
+                <h3>NZ Policy &amp; Data Analysis</h3>
+                <p>Data-driven analysis of Aotearoa's housing crisis, cost of living, and public policy. Numbers, context, and honest questions — no party lines.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <div>
-            <h3>Writing — Substack Series</h3>
-            <p>A 5-part series on what the bottom of the ladder teaches you about sales, trust, attention, and leadership. Written from the perspective of someone who's actually at the bottom — not pretending otherwise.</p>
+        <img src="https://media.base44.com/images/public/6a6e5d661c68f94a6ec47f21/faabca058_generated_image.png" alt="Working" class="split-img animate d4">
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- What I Offer -->
+  <div class="section" id="offer">
+    <p class="section-label animate d1">What I Offer</p>
+    <h2 class="section-heading animate d2">Services</h2>
+    <p class="section-sub animate d3">One focused service, done properly.</p>
+    <div class="offer-card animate d3">
+      <h3>Quill — LinkedIn Ghostwriting for Founders</h3>
+      <p>A professional ghostwriting service that captures a founder's voice and turns it into LinkedIn content that gets read. Voice capture call, 15 posts per month, engagement tracking. First 4 posts free — no obligation.</p>
+      <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" class="btn-primary">Visit Quill →</a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Writing -->
+  <div class="section-full" id="writing">
+    <div class="section-inner">
+      <p class="section-label animate d1">My Writing</p>
+      <h2 class="section-heading animate d2">From the <span class="gold">Bottom Up</span></h2>
+      <p class="section-sub animate d3">A 5-part series on what the bottom of the ladder teaches you about sales. If you want to see how I write — start here.</p>
+      <div class="writing-card animate d3">
+        <p class="writing-series">Part 1 · 5-Part Series</p>
+        <h3 class="writing-title">What I Learned About Sales From Being the One Nobody Wants to Talk To</h3>
+        <p class="writing-desc">The view from the cold call seat. Objections aren't rejection — they're data. Written from experience, not theory.</p>
+        <a href="https://zephrbrennan.substack.com" target="_blank" class="writing-link">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Projects -->
+  <div class="section" id="projects">
+    <p class="section-label animate d1">Portfolio &amp; Repos</p>
+    <h2 class="section-heading animate d2">Projects</h2>
+    <p class="section-sub animate d3">Everything is public. Everything is in progress.</p>
+    <div class="projects-grid">
+      <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" class="project-card animate d1">
+        <h3>Quill — Ghostwriting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3>
+        <p>Professional LinkedIn ghostwriting service — sample posts, pricing, process, and contact form.</p>
+        <div class="tags"><span class="tag">Ghostwriting</span><span class="tag">LinkedIn</span><span class="tag">Live</span></div>
+      </a>
+      <a href="https://github.com/ZephrBrennanOfficial/sales-consulting-toolkit" target="_blank" class="project-card animate d2">
+        <h3>Sales Consulting Toolkit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3>
+        <p>Practical sales frameworks — discovery templates, audit checklists, ROI calculator, and objection handling.</p>
+        <div class="tags"><span class="tag">Sales</span><span class="tag">Frameworks</span></div>
+      </a>
+      <a href="https://github.com/ZephrBrennanOfficial/business-case-studies" target="_blank" class="project-card animate d3">
+        <h3>Business Case Studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3>
+        <p>Practice case studies — market analysis, sales diagnostics, and revenue modeling.</p>
+        <div class="tags"><span class="tag">Analysis</span><span class="tag">NZ Market</span></div>
+      </a>
+      <a href="https://github.com/ZephrBrennanOfficial/sales-practice-lab" target="_blank" class="project-card animate d4">
+        <h3>Sales Practice Lab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3>
+        <p>Mock discovery calls, cold outreach experiments, book notes, and objection roleplay logs.</p>
+        <div class="tags"><span class="tag">Practice</span><span class="tag">Writing</span></div>
+      </a>
+      <a href="https://github.com/ZephrBrennanOfficial/nz-policy-analysis" target="_blank" class="project-card animate d5">
+        <h3>NZ Policy Analysis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3>
+        <p>Data-driven analysis of Aotearoa NZ housing, cost of living, and public policy.</p>
+        <div class="tags"><span class="tag">Data</span><span class="tag">NZ</span></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- About -->
+  <div class="section-full" id="about">
+    <div class="section-inner">
+      <p class="section-label animate d1">About Me</p>
+      <h2 class="section-heading animate d2">The person <span class="gold">behind the work</span></h2>
+      <div class="about-grid">
+        <div class="about-text animate d3">
+          <p>I'm Zephr — an early-career professional based in <strong>Auckland, Aotearoa New Zealand</strong>. My background spans customer service, telefundraising, and freelance work in theatre and makeup artistry. None of that is a traditional path into business strategy or tech. I'm aware of that.</p>
+          <p>But I've learned that <strong>starting from the bottom is a perspective you can't fake</strong>. When you've been the person making the cold calls, fielding the objections, and hearing the rejections — you understand things about sales and human behaviour that no course can teach. That perspective is what I'm building on.</p>
+          <p>I write on Substack, build things publicly on GitHub, and put in the reps every day — trusting that <strong>competence earned through genuine effort will always outpace credentials handed out without it</strong>.</p>
+          <p>The goal isn't to skip steps. It's to earn every single one of them — and to get to the top because of where I started, not in spite of it.</p>
+          <div class="about-quote">
+            <p>"The view from here teaches you things the top never will."</p>
           </div>
         </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <div>
-            <h3>AI &amp; Tools</h3>
-            <p>Tinkering with AI to build useful things — ghostwriting service sites, automated workflows, data analysis tools. Treating AI as a practical skill to develop, not a buzzword to chase.</p>
+        <div class="animate d4" style="display:flex;flex-direction:column;gap:1.25rem;">
+          <div class="value-card" style="cursor:default;">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <h3>Background</h3>
+            <p>Customer service · Telefundraising · Theatre &amp; makeup artistry · Early-career business &amp; sales</p>
           </div>
-        </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <div>
-            <h3>NZ Policy &amp; Data Analysis</h3>
-            <p>Data-driven analysis of Aotearoa's housing crisis, cost of living, and public policy. Numbers, context, and honest questions — no party lines.</p>
+          <div class="value-card" style="cursor:default;">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h3>Currently building</h3>
+            <p>Quill ghostwriting · Sales frameworks · Substack series · NZ policy analysis · AI workflow tools</p>
           </div>
-        </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <div>
-            <h3>LinkedIn Ghostwriting (Quill)</h3>
-            <p>A professional ghostwriting service for founders who should be posting but don't have time. Voice capture, post writing, engagement tracking — the full process. First 4 posts free.</p>
+          <div class="value-card" style="cursor:default;">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4"/><path d="M8 12h8"/></svg></div>
+            <h3>Striving for</h3>
+            <p>A career built on irreplaceable perspective — where the bottom-up view becomes the thing that makes the insight worth paying for.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- What I Offer — Quill only -->
-  <section class="animate delay-5">
-    <div class="section-num">03</div>
-    <div class="container">
-      <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg> Services</p>
-      <h2 class="section-title">What I Offer</h2>
-      <div class="card-stack">
-        <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" rel="noopener noreferrer" class="offer-card">
-          <h3>Quill — LinkedIn Ghostwriting for Founders</h3>
-          <p>A professional service that captures a founder's voice and turns it into LinkedIn content that gets read. Voice capture call, 15 posts per month, engagement tracking. First 4 posts free — no obligation.</p>
-          <span class="offer-link">Visit Quill &rarr;</span>
-        </a>
-      </div>
+  <div class="divider"></div>
+
+  <!-- Connect -->
+  <div class="section" id="connect">
+    <p class="section-label animate d1">Socials</p>
+    <h2 class="section-heading animate d2">Connect</h2>
+    <div class="connect-grid">
+      <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" rel="noopener noreferrer" class="connect-btn animate d1">
+        <svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 010 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 010-6.479L12 14z"/></svg>
+        <span>Quill</span>
+      </a>
+      <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="connect-btn animate d2">
+        <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.612V24h21.08V10.612H1.46zM1.46 4.273V1.437h21.08v2.836H1.46z"/></svg>
+        <span>Substack</span>
+      </a>
+      <a href="https://www.linkedin.com/in/zephrbrennan" target="_blank" rel="noopener noreferrer" class="connect-btn animate d3">
+        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/ZephrBrennanOfficial" target="_blank" rel="noopener noreferrer" class="connect-btn animate d4">
+        <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+        <span>GitHub</span>
+      </a>
+      <a href="https://twitter.com/ZephrBrennan" target="_blank" rel="noopener noreferrer" class="connect-btn animate d5">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span>Twitter / X</span>
+      </a>
     </div>
-  </section>
-
-  <div class="pattern-divider"></div>
-
-  <section class="animate delay-6">
-    <div class="section-num">04</div>
-    <div class="container">
-      <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg> Writing</p>
-      <h2 class="section-title">My Writing</h2>
-      <div class="card-stack">
-        <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="writing-card">
-          <div class="writing-title">What I Learned About Sales From Being the One Nobody Wants to Talk To</div>
-          <div class="writing-desc">Part 1 of a 5-part series on what the bottom of the ladder teaches you about sales. If you want to see how I write — this is it.</div>
-          <div class="writing-link">Read on Substack &rarr;</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="animate delay-7">
-    <div class="section-num">05</div>
-    <div class="container">
-      <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Projects</p>
-      <h2 class="section-title">Portfolio &amp; Repos</h2>
-      <div class="card-stack">
-        <a href="https://github.com/ZephrBrennanOfficial/ghostwriting" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">Quill — LinkedIn Ghostwriting</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Professional LinkedIn ghostwriting service — sample posts, pricing, process, and contact forms.</div>
-          <div class="project-tags"><span class="tag">Ghostwriting</span><span class="tag">LinkedIn</span><span class="tag">Service</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/sales-consulting-toolkit" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">Sales Consulting Toolkit</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Practical sales frameworks — audit checklists, discovery templates, ROI calculator, objection handling, and sales psychology.</div>
-          <div class="project-tags"><span class="tag">Sales</span><span class="tag">Frameworks</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/business-case-studies" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">Business Case Studies</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Practice case studies — market analysis, sales diagnostics, and revenue modeling.</div>
-          <div class="project-tags"><span class="tag">Analysis</span><span class="tag">NZ Market</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/sales-practice-lab" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">Sales Practice Lab</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Mock discovery calls, cold outreach experiments, book notes, and objection roleplay logs.</div>
-          <div class="project-tags"><span class="tag">Practice</span><span class="tag">Writing</span></div>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial/nz-policy-analysis" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="project-header"><div class="project-title">NZ Policy Analysis</div><svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="project-desc">Data-driven analysis of Aotearoa NZ housing, cost of living, and public policy.</div>
-          <div class="project-tags"><span class="tag">Data</span><span class="tag">NZ</span></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="pattern-divider"></div>
-
-  <section class="animate delay-8">
-    <div class="section-num">06</div>
-    <div class="container">
-      <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Background</p>
-      <h2 class="section-title">About Me</h2>
-      <div class="about-card">
-        <p>I'm Zephr — an early-career professional based in <strong>Auckland, Aotearoa New Zealand</strong>. My background spans customer service, telefundraising, and freelance work in theatre and makeup artistry. None of that is a traditional path into business strategy or tech. I'm aware of that.</p>
-        <p>But I've learned that <span class="highlight">starting from the bottom is a perspective you can't fake</span>. When you've been the person making the cold calls, fielding the objections, and hearing the rejections — you understand things about sales and human behaviour that no course can teach. That perspective is what I'm building on.</p>
-        <p>I write on <strong>Substack</strong>, share my process on <strong>LinkedIn</strong>, build tools on <strong>GitHub</strong>, and document everything I learn along the way. Not because I've arrived — because the work itself is the proof.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="animate delay-9 aspiration-section">
-    <div class="aspiration-bg"></div>
-    <div class="section-num">07</div>
-    <div class="container">
-      <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg> Aspirations</p>
-      <h2 class="section-title">Where I'm Heading</h2>
-      <div class="aspiration-card">
-        <p class="quote">"It doesn't matter where you start. It matters that you refuse to stay there."</p>
-        <p>I'm not pretending to be senior. I'm not claiming experience I don't have. What I am doing is <strong>putting in the reps, every day, in public</strong> — and trusting that competence earned through genuine effort will always outpace credentials handed out without it.</p>
-        <p>I'm building toward a career where my <strong>bottom-up perspective</strong> — the sales floor, the cold calls, the rejections, the customer service frontline — becomes the thing that makes my insight irreplaceable. Not despite where I started, but <strong>because of it</strong>.</p>
-        <p>The goal isn't to skip steps. It's to earn every single one of them.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="pattern-divider"></div>
-
-  <section class="animate delay-10">
-    <div class="section-num">08</div>
-    <div class="container">
-      <p class="section-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Socials</p>
-      <h2 class="section-title">Connect</h2>
-      <div class="connect-grid">
-        <a href="https://zephrbrennanofficial.github.io/ghostwriting/" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-8.832-4.998 12.078 12.078 0 0 1 .665-6.479L12 14z"/><path d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"/></svg>
-          <span>Quill</span>
-        </a>
-        <a href="https://zephrbrennan.substack.com" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.612V24h21.08V10.612H1.46zM6.602 18.93H3.294v-2.01h3.308v2.01zm0-3.676H3.294v-2.01h3.308v2.01zm5.825 3.676H9.119v-2.01h3.308v2.01zm0-3.676H9.119v-2.01h3.308v2.01zm5.825 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zm5.826 3.676h-3.308v-2.01h3.308v2.01zm0-3.676h-3.308v-2.01h3.308v2.01zM1.46 4.273V1.437h21.08v2.836H1.46z"/></svg>
-          <span>Substack</span>
-        </a>
-        <a href="https://www.linkedin.com/in/zephrbrennan" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/ZephrBrennanOfficial" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a href="https://twitter.com/ZephrBrennan" target="_blank" rel="noopener noreferrer" class="connect-btn">
-          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          <span>Twitter / X</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <footer>
-    <div class="footer-pattern"></div>
-    <div class="footer-ornament">
-      <svg viewBox="0 0 24 24"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5z"/></svg>
-    </div>
-    <div class="footer-logo">Zephr Brennan</div>
-    <p class="footer-text">&copy; 2026 Zephr Brennan &middot; <span>Building in public</span> &middot; Auckland, Aotearoa NZ</p>
+    <div class="footer-name">Zephr Brennan</div>
+    <p>&copy; 2026 Zephr Brennan &middot; <span>Building in public</span> &middot; Auckland, Aotearoa NZ</p>
   </footer>
 
   <script>
+    // Scroll progress
     const progressBar = document.getElementById('scrollProgress');
     const scrollTopBtn = document.getElementById('scrollTop');
+    const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
       const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       progressBar.style.width = scrolled + '%';
-      if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); }
-      else { scrollTopBtn.classList.remove('visible'); }
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+      nav.classList.toggle('scrolled', window.scrollY > 20);
     });
-    const taglineFull = "Writer · Builder · Lifelong Learner — Auckland, Aotearoa NZ";
-    const taglineEl = document.getElementById('taglineText');
-    let charIndex = 0;
-    function typeTagline() {
-      if (charIndex < taglineFull.length) {
-        taglineEl.textContent += taglineFull[charIndex];
-        charIndex++;
-        setTimeout(typeTagline, 40);
-      }
-    }
-    setTimeout(typeTagline, 800);
+
+    // Animate on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.animationPlayState = 'running';
+          entry.target.classList.add('in-view');
           observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+    // Close nav on link click (mobile)
+    document.querySelectorAll('#navLinks a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
   </script>
 </body>
 </html>
